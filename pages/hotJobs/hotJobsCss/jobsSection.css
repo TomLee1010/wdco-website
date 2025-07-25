@@ -508,6 +508,12 @@ header .searchbar-container{
   }
 }
 
+@media (max-width: 500px){
+  .jobs-outer-container .job-list-container{
+    width: 90%;
+  }
+}
+
 @media (max-width: 400px){
   .jobs-outer-container .job-list-container #pages-controls button{
     font-size: 1.1rem;
