@@ -61,7 +61,7 @@ input[type=text], select, textarea {
 
 #user-email{
   background-color: white;
-  background-image: url('../contactUsImg/emailImg.webp');
+  background-image: url('/wdco-website/pages/contactUs/contactUsImg/emailImg.webp');
   background-position: 17px 8px; 
   background-size: 25px 25px;
   background-repeat: no-repeat;
@@ -70,7 +70,7 @@ input[type=text], select, textarea {
 
 #user-phone-num{
   background-color: white;
-  background-image: url('../contactUsImg/phoneImg.webp');
+  background-image: url('/wdco-website/pages/contactUs/contactUsImg/phoneImg.webp');
   background-position: 17px 8px; 
   background-size: 25px 25px;
   background-repeat: no-repeat;
