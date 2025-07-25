@@ -1,0 +1,227 @@
+/* Start of job's detail*/
+.job-details-container {
+  margin-top: 80px;
+}
+
+.job-details-container .job-details{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: rgb(255, 255, 255);
+  padding-bottom: 50px;
+  color: #3e3e3e;
+  border-radius: 13px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+@media (max-width: 768px) {
+  .job-details-container .job-details {
+    width: 95%;
+    margin: 10px auto;
+    padding: 15px;
+  }
+}
+
+.job-details-container .job-details .detail-bannar-container{
+  width: 100%;
+  height: auto;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+
+.job-details-container .job-details .job-bannar{
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  transition: all, 0.2s;
+  left: auto;
+  right: auto;
+}
+
+.job-details-container .job-details .inner-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-top: 15px;
+}
+
+.job-details-container .job-details .inner-container .inner-alignment{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 600px; /* Adjust this value as needed */
+}
+
+.job-details-container .job-details .controls{
+  display: flex;
+  justify-content: right;
+  width: 100%;
+  border-bottom: solid 2px rgba(70, 70, 70, 0.05);
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+}
+
+.job-details-container .job-details .controls .share-btn, 
+.job-details-container .job-details .controls .whatsapp-link,
+.job-details-container .job-details .controls .new-tab
+{
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  gap: 10px;
+}
+
+.job-details-container .job-details .controls .share-btn,
+.job-details-container .job-details .controls .whatsapp-link,
+.job-details-container .job-details .controls .new-tab
+{
+  background-color: rgba(0,0,0,0);
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
+  color: #3d3d3d;
+  text-decoration: none;
+}
+
+.job-details-container .job-details .controls .whatsapp-link{
+  background-color: rgb(51, 201, 21);
+  color: #ffffff;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 6px;
+  padding-bottom: 8px;
+  border-radius: 10px;
+  margin-right: 20px;
+  transition: background-color, 0.2s;
+}
+
+.job-details-container .job-details .controls .share-btn:hover{
+  text-decoration: underline;
+}
+
+.job-details-container .job-details .controls .whatsapp-link:hover{
+  background-color: rgb(41, 168, 15);
+}
+
+.job-details-container .job-details .controls .new-tab:hover{
+  text-decoration: underline;
+}
+
+.job-details-container .job-details img{
+  object-fit: cover;
+  width: 27px;
+  height: 27px;
+}
+
+.job-details-container .job-details .whatsapp-link img{
+  width: 20px;
+  height: 20px;
+}
+
+.job-details-container .job-details .company-name img{
+  width: 25px;
+  height: 25px;
+  margin-top: 5px;
+}
+
+.job-details-container .job-details .inner-container .company-name{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.job-details-container .job-details .inner-container .company{
+  font-size: 1.2rem;
+}
+
+.job-details-container .job-details .inner-container .question-btn{
+  background-color: rgba(0,0,0,0);
+  border: none;
+  cursor: pointer;
+}
+
+.job-details-container .job-details .inner-container .outer-span{
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 20px;
+}
+
+.job-details-container .job-details .inner-container .date{
+  color: #848484;
+  font-size: 0.9rem;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.job-details-container .job-details .inner-container .apply-btn{
+  padding: 10px;
+  width: 110px;
+  font-size: 1rem;
+  background-color: #3674F8;
+  color: white;
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+
+.job-details-container .job-details .inner-container .apply-btn:hover{
+  background-color: #367df8;
+}
+
+.job-details-container .job-details .inner-container ul{
+  list-style-type: circle;
+  padding-left: 10px;
+}
+
+.job-details-container .job-details .inner-container li{
+  margin-bottom: 10px;
+}
+
+.job-details-container .job-details .inner-container .advice{
+  display: flex;
+  flex-direction: column;
+  background-color: #E9F4FF;
+  width: 80%;
+  padding: 20px;
+  padding-bottom: 46px;
+  border-radius: 20px;
+  margin-top: 10px;
+}
+
+.job-details-container .job-details .inner-container .advice p{
+  text-align: center;
+  margin-top: 0px;
+}
+
+.job-details-container .job-details .inner-container .advice img{
+  margin-top: -5px;
+}
+
+.job-details-container .job-details .inner-container .advice .advice-title{
+  display: flex;
+  align-items: center;
+  margin-top: -20px;
+  font-size: 1.1rem;
+  gap: 5px;
+}
+
+.job-details-container .job-details .inner-container .white-space{
+  padding: 35px;
+}
+
+.job-details-container .job-details h2,
+.job-details-container .job-details h3,
+.job-details-container .job-details h4{
+  color: black;
+}
+
+/* End of job's detail*/

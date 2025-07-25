@@ -1,0 +1,958 @@
+{
+  "jobs": {
+    "hotJobs": {
+      "0": {
+        "highLights": { 
+          "responsibilities": "Explore new business opportunities and maintain customer relationship...",
+          "requirements": "3-5 years of relationship management experience "
+        },
+        "details": {
+          "company": "A leading Chinese bank is recruiting",
+          "jobTitle": "Relationship Manager - Corporate Banking",
+          "level": "Easy",
+          "salary": "80-100k",
+          "workHours": "8:00 am - 10:00 pm",
+          "location": "Kowlood",
+          "classification": "Account & Relationship Management",
+          "date": "2020-1-1",
+          "responsibilities": "You have to explore new business opportunities, maintain customer relationship, and provide professional financial solutions.",
+          "requirements": "You are required to have 3-5 years of relationship management experience in corporate banking or commercial banking business, a Bachelor degree or above in Business Administration or related disciplines, and a Strong financial & credit analysis and report writing skills"
+        }
+      },
+  
+      "1": {
+        "highLights": { 
+          "responsibilities": "",
+          "requirements": ""
+        },
+        "details": {
+          "company": "Bank of China is recruiting",
+          "jobTitle": "Branch Manager / Team Manager, Retail Banking",
+          "level": "High Level",
+          "salary": "20-50k",
+          "workHours": "10:00 am - 7:00 pm",
+          "location": "Wan Chai",
+          "classification": "Account & Relationship Management",
+          "date": "2020-1-2",
+          "responsibilities": "<dt>1. Explore New Business Opportunities:</dt><dd><ul><li>Proactively identify and assess potential business opportunities, markets, and clients.</li><li>Develop strategies to expand the organization’s reach and revenue streams.</li><li>Collaborate with cross-functional teams to explore innovative ways to grow the business.</li></ul></dd><dt>2. Maintain Customer Relationships:</dt><dd><ul><li>Cultivate and nurture strong relationships with existing clients.</li><li>Understand their needs, preferences, and financial goals.</li><li>Provide personalized financial advice and solutions to enhance customer satisfaction and loyalty.</li></ul></dd><dt>3. Maintain Customer Relationships:</dt><dd><ul><li>Analyze clients’ financial situations, risk tolerance, and investment objectives.</li><li>Recommend tailored financial products and services, such as investment portfolios, loans, and insurance.</li><li>Ensure compliance with regulatory guidelines and ethical standards.</li></ul></dd>",
+          "requirements": "<dt>1. Experience:</dt><dd><ul><li>3-5 years of experience in relationship management within corporate banking or commercial banking.</li><li>Demonstrated success in client acquisition, retention, and revenue growth.</li><li>Familiarity with financial products and services.</li></ul> </dd><dt>2. Education:</dt><dd><ul><li>Bachelor’s degree or above in Business Administration or related disciplines.</li><li>Additional certifications (e.g., CFA, CPA) are advantageous.</li></ul> </dd><dt>3. Skills:</dt><dd><ul><li>Ability to assess creditworthiness, evaluate risk, and make informed lending decisions.</li><li>Proficiency in preparing clear, concise, and accurate reports for internal and external stakeholders.</li></ul> </dd>"
+        }
+      },
+  
+      "2": {
+        "highLights": { 
+          "responsibilities": "",
+          "requirements": ""
+        },
+        "details": {
+          "company": "A leading Chinese bank is recruiting",
+          "jobTitle": "Relationship Manager, Retail Banking",
+          "level": "Easy",
+          "salary": "20-50k",
+          "workHours": "10:00 am - 6:00 pm",
+          "location": "Tsing Yi",
+          "classification": "Account & Relationship Management",
+          "date": "2020-1-7",
+          "responsibilities": "<dt>1. Explore New Business Opportunities:</dt><dd><ul><li>Proactively identify and assess potential business opportunities, markets, and clients.</li><li>Develop strategies to expand the organization’s reach and revenue streams.</li><li>Collaborate with cross-functional teams to explore innovative ways to grow the business.</li></ul> </dd><dt>2. Maintain Customer Relationships:</dt><dd><ul><li>Cultivate and nurture strong relationships with existing clients.</li><li>Understand their needs, preferences, and financial goals.</li><li>Provide personalized financial advice and solutions to enhance customer satisfaction and loyalty.</li></ul> </dd><dt>3. Maintain Customer Relationships:</dt><dd><ul><li>Analyze clients’ financial situations, risk tolerance, and investment objectives.</li><li>Recommend tailored financial products and services, such as investment portfolios, loans, and insurance.</li><li>Ensure compliance with regulatory guidelines and ethical standards.</li></ul> </dd>",
+          "requirements": ""
+        }
+      },
+  
+      "3": {
+        "highLights": { 
+          "responsibilities": "",
+          "requirements": ""
+        },
+        "details": {
+          "company": "HSBC is recruiting",
+          "jobTitle": "Investment Advisor",
+          "level": "Easy",
+          "salary": "20-50k",
+          "workHours": "10:00 am - 6:00 pm",
+          "location": "Tsing Yi",
+          "classification": "Account & Relationship Management",
+          "date": "2020-1-20",
+          "responsibilities": "",
+          "requirements": ""
+        }
+      },
+  
+      "4": {
+        "highLights": { 
+          "responsibilities": "",
+          "requirements": ""
+        },
+        "details": {
+          "company": "A leading Chinese bank is recruiting",
+          "jobTitle": "Senior Insurance Specialist / Insurance Specialist - International and Local Banks",
+          "level": "Easy",
+          "salary": "20-50k",
+          "workHours": "10:00 am - 6:00 pm",
+          "location": "Tsing Yi",
+          "classification": "Account & Relationship Management",
+          "date": "2020-1-30",
+          "responsibilities": "",
+          "requirements": ""
+        }
+      },
+  
+      "5": {
+        "highLights": { 
+          "responsibilities": "",
+          "requirements": ""
+        },
+        "details": {
+          "company": "A leading Chinese bank is recruiting",
+          "jobTitle": "Compliance Manager",
+          "level": "Easy",
+          "salary": "20-50k",
+          "workHours": "10:00 am - 6:00 pm",
+          "location": "Yuen Long",
+          "classification": "Account & Relationship Management",
+          "date": "2020-2-1",
+          "responsibilities": "",
+          "requirements": ""
+        }
+      },
+  
+      "6": {
+        "highLights": { 
+          "responsibilities": "",
+          "requirements": ""
+        },
+        "details": {
+          "company": "A leading Chinese bank is recruiting",
+          "jobTitle": "Senior Manager, Business Banking Acquisition, SME",
+          "level": "Easy",
+          "salary": "20-50k",
+          "workHours": "10:00 am - 6:00 pm",
+          "location": "Tsing Yi",
+          "classification": "Account & Relationship Management",
+          "date": "2020-2-10",
+          "responsibilities": "",
+          "requirements": ""
+        }
+      },
+  
+      "7": {
+        "highLights": { 
+          "responsibilities": "",
+          "requirements": ""
+        },
+        "details": {
+          "company": "A leading Chinese bank is recruiting",
+          "jobTitle": "Senior Fund Administrator",
+          "level": "Easy",
+          "salary": "20-50k",
+          "workHours": "10:00 am - 6:00 pm",
+          "location": "Tsing Yi",
+          "classification": "Account & Relationship Management",
+          "date": "2020-2-17",
+          "responsibilities": "",
+          "requirements": ""
+        }
+      },
+  
+      "8": {
+        "highLights": { 
+          "responsibilities": "",
+          "requirements": ""
+        },
+        "details": {
+          "company": "A leading Chinese bank is recruiting",
+          "jobTitle": "Trust Administration Manager",
+          "level": "Easy",
+          "salary": "20-50k",
+          "workHours": "10:00 am - 6:00 pm",
+          "location": "Tsing Yi",
+          "classification": "Account & Relationship Management",
+          "date": "2020-2-18",
+          "responsibilities": "",
+          "requirements": ""
+        }
+      },
+  
+      "9": {
+        "highLights": { 
+          "responsibilities": "",
+          "requirements": ""
+        },
+        "details": {
+          "company": "A leading Chinese bank is recruiting",
+          "jobTitle": "Business Development Manager / Senior Officer / Officer – Family Trust",
+          "level": "Easy",
+          "salary": "20-50k",
+          "workHours": "10:00 am - 6:00 pm",
+          "location": "Tsing Yi",
+          "classification": "Account & Relationship Management",
+          "date": "2020-3-5",
+          "responsibilities": "",
+          "requirements": ""
+        }
+      }
+    },
+
+    "regularJobs": {
+      "0": {
+        "highLights": { 
+          "responsibilities": "Explore new business opportunities and maintain customer relationship...",
+          "requirements": "3-5 years of relationship management experience "
+        },
+        "details": {
+          "company": "A Soffie bank is recruiting",
+          "jobTitle": "MPF Marketing Manager / Officer (Banking)",
+          "level": "Easy",
+          "salary": "20-50k",
+          "workHours": "12:00 am - 6:00 pm",
+          "location": "Tsing Yi",
+          "classification": "Account & Relationship Management",
+          "date": "2020-3-31",
+          "responsibilities": "You have to explore new business opportunities, maintain customer relationship, and provide professional financial solutions.",
+          "requirements": "You are required to have 3-5 years of relationship management experience in corporate banking or commercial banking business, a Bachelor degree or above in Business Administration or related disciplines, and a Strong financial & credit analysis and report writing skills"
+        }
+      },
+  
+      "1": {
+        "highLights": { 
+          "responsibilities": "",
+          "requirements": ""
+        },
+        "details": {
+          "company": "Bank of China is recruiting",
+          "jobTitle": "Marketing Manager, Custody",
+          "level": "Easy",
+          "salary": "20-50k",
+          "workHours": "10:00 am - 7:00 pm",
+          "location": "Tsing Yi",
+          "classification": "Account & Relationship Management",
+          "date": "2020-4-2",
+          "responsibilities": "",
+          "requirements": ""
+        }
+      },
+  
+      "2": {
+        "highLights": { 
+          "responsibilities": "",
+          "requirements": ""
+        },
+        "details": {
+          "company": "A leading Chinese bank is recruiting",
+          "jobTitle": "Branch Service Manager",
+          "level": "Easy",
+          "salary": "20-50k",
+          "workHours": "10:00 am - 6:00 pm",
+          "location": "Tsing Yi",
+          "classification": "Account & Relationship Management",
+          "date": "2020-4-6",
+          "responsibilities": "",
+          "requirements": ""
+        }
+      },
+  
+      "3": {
+        "highLights": { 
+          "responsibilities": "",
+          "requirements": ""
+        },
+        "details": {
+          "company": "HSBC is recruiting",
+          "jobTitle": "Assistant Manager, Operation (Private Banking)",
+          "level": "Easy",
+          "salary": "20-50k",
+          "workHours": "10:00 am - 6:00 pm",
+          "location": "Tsing Yi",
+          "classification": "Account & Relationship Management",
+          "date": "2020-4-10",
+          "responsibilities": "",
+          "requirements": ""
+        }
+      },
+  
+      "4": {
+        "highLights": { 
+          "responsibilities": "",
+          "requirements": ""
+        },
+        "details": {
+          "company": "A leading Chinese bank is recruiting",
+          "jobTitle": "Loan Officer, Retail Banking",
+          "level": "Easy",
+          "salary": "20-50k",
+          "workHours": "10:00 am - 6:00 pm",
+          "location": "Tsing Yi",
+          "classification": "Account & Relationship Management",
+          "date": "2020-4-25",
+          "responsibilities": "",
+          "requirements": ""
+        }
+      },
+  
+      "5": {
+        "highLights": { 
+          "responsibilities": "",
+          "requirements": ""
+        },
+        "details": {
+          "company": "A leading Chinese bank is recruiting",
+          "jobTitle": "Project Manager, IT Industry",
+          "level": "Easy",
+          "salary": "20-50k",
+          "workHours": "10:00 am - 6:00 pm",
+          "location": "Tsing Yi",
+          "classification": "Account & Relationship Management",
+          "date": "2020-4-26",
+          "responsibilities": "",
+          "requirements": ""
+        }
+      },
+  
+      "6": {
+        "highLights": { 
+          "responsibilities": "",
+          "requirements": ""
+        },
+        "details": {
+          "company": "A leading Chinese bank is recruiting",
+          "jobTitle": "Assistant Manager, Solution, IT industry",
+          "level": "Easy",
+          "salary": "20-50k",
+          "workHours": "10:00 am - 6:00 pm",
+          "location": "Tsing Yi",
+          "classification": "Account & Relationship Management",
+          "date": "2020-4-28",
+          "responsibilities": "",
+          "requirements": ""
+        }
+      },
+  
+      "7": {
+        "highLights": { 
+          "responsibilities": "",
+          "requirements": ""
+        },
+        "details": {
+          "company": "A leading Chinese bank is recruiting",
+          "jobTitle": "Relationship Manager, Private Banking",
+          "level": "Easy",
+          "salary": "20-50k",
+          "workHours": "10:00 am - 6:00 pm",
+          "location": "Tsing Yi",
+          "classification": "Account & Relationship Management",
+          "date": "2020-5-8",
+          "responsibilities": "",
+          "requirements": ""
+        }
+      },
+  
+      "8": {
+        "highLights": { 
+          "responsibilities": "",
+          "requirements": ""
+        },
+        "details": {
+          "company": "A leading Chinese bank is recruiting",
+          "jobTitle": "Deputy Branch Manager",
+          "level": "Easy",
+          "salary": "20-50k",
+          "workHours": "10:00 am - 6:00 pm",
+          "location": "Tsing Yi",
+          "classification": "Account & Relationship Management",
+          "date": "2020-5-10",
+          "responsibilities": "",
+          "requirements": ""
+        }
+      },
+  
+      "9": {
+        "highLights": { 
+          "responsibilities": "",
+          "requirements": ""
+        },
+        "details": {
+          "company": "A leading Chinese bank is recruiting",
+          "jobTitle": "Test Manager, Banking",
+          "level": "Easy",
+          "salary": "20-50k",
+          "workHours": "10:00 am - 6:00 pm",
+          "location": "Tsing Yi",
+          "classification": "Account & Relationship Management",
+          "date": "2020-5-12",
+          "responsibilities": "",
+          "requirements": ""
+        }
+      },
+      
+      "10": {
+        "highLights": { 
+          "responsibilities": "Explore new business opportunities and maintain customer relationship...",
+          "requirements": "3-5 years of relationship management experience "
+        },
+        "details": {
+          "company": "A leading Chinese bank is recruiting",
+          "jobTitle": "Relationship Manager - Corporate Banking",
+          "level": "Easy",
+          "salary": "20-50k",
+          "workHours": "10:00 am - 6:00 pm",
+          "location": "Tsing Yi",
+          "classification": "Account & Relationship Management",
+          "date": "2020-6-31",
+          "responsibilities": "You have to explore new business opportunities, maintain customer relationship, and provide professional financial solutions.",
+          "requirements": "You are required to have 3-5 years of relationship management experience in corporate banking or commercial banking business, a Bachelor degree or above in Business Administration or related disciplines, and a Strong financial & credit analysis and report writing skills"
+        }
+      },
+  
+      "11": {
+        "highLights": { 
+          "responsibilities": "",
+          "requirements": ""
+        },
+        "details": {
+          "company": "Bank of China is recruiting",
+          "jobTitle": "Analyst Programmer/System Analyst, Banking",
+          "level": "Easy",
+          "salary": "20-50k",
+          "workHours": "10:00 am - 7:00 pm",
+          "location": "Tsing Yi",
+          "classification": "Account & Relationship Management",
+          "date": "2020-7-1",
+          "responsibilities": "",
+          "requirements": ""
+        }
+      },
+  
+      "12": {
+        "highLights": { 
+          "responsibilities": "",
+          "requirements": ""
+        },
+        "details": {
+          "company": "A leading Chinese bank is recruiting",
+          "jobTitle": "Business Development Manager, SME",
+          "level": "Easy",
+          "salary": "20-50k",
+          "workHours": "10:00 am - 6:00 pm",
+          "location": "Tsing Yi",
+          "classification": "Account & Relationship Management",
+          "date": "2020-7-3",
+          "responsibilities": "",
+          "requirements": ""
+        }
+      },
+  
+      "13": {
+        "highLights": { 
+          "responsibilities": "",
+          "requirements": ""
+        },
+        "details": {
+          "company": "HSBC is recruiting",
+          "jobTitle": "Manager, Regulatory Reporting (Banking)",
+          "level": "Easy",
+          "salary": "20-50k",
+          "workHours": "10:00 am - 6:00 pm",
+          "location": "Tsing Yi",
+          "classification": "Account & Relationship Management",
+          "date": "2020-7-15",
+          "responsibilities": "",
+          "requirements": ""
+        }
+      },
+  
+      "14": {
+        "highLights": { 
+          "responsibilities": "",
+          "requirements": ""
+        },
+        "details": {
+          "company": "A leading Chinese bank is recruiting",
+          "jobTitle": "IT Business Analyst, Enterprise Solution (Banking)",
+          "level": "Easy",
+          "salary": "20-50k",
+          "workHours": "10:00 am - 6:00 pm",
+          "location": "Tsing Yi",
+          "classification": "Account & Relationship Management",
+          "date": "2020-7-25",
+          "responsibilities": "",
+          "requirements": ""
+        }
+      },
+  
+      "15": {
+        "highLights": { 
+          "responsibilities": "",
+          "requirements": ""
+        },
+        "details": {
+          "company": "A leading Chinese bank is recruiting",
+          "jobTitle": "IT Big Data Engineer (Banking)",
+          "level": "Easy",
+          "salary": "20-50k",
+          "workHours": "10:00 am - 6:00 pm",
+          "location": "Tsing Yi",
+          "classification": "Account & Relationship Management",
+          "date": "2020-8-16",
+          "responsibilities": "",
+          "requirements": ""
+        }
+      },
+  
+      "16": {
+        "highLights": { 
+          "responsibilities": "",
+          "requirements": ""
+        },
+        "details": {
+          "company": "A leading Chinese bank is recruiting",
+          "jobTitle": "Senior Manager - Policy & Portfolio Management (Banking)",
+          "level": "Easy",
+          "salary": "20-50k",
+          "workHours": "10:00 am - 6:00 pm",
+          "location": "Tsing Yi",
+          "classification": "Account & Relationship Management",
+          "date": "2020-9-4",
+          "responsibilities": "",
+          "requirements": ""
+        }
+      },
+  
+      "17": {
+        "highLights": { 
+          "responsibilities": "",
+          "requirements": ""
+        },
+        "details": {
+          "company": "A leading Chinese bank is recruiting",
+          "jobTitle": "Senior Credit Risk Manager, Credit Assessment (Banking)",
+          "level": "Easy",
+          "salary": "20-50k",
+          "workHours": "10:00 am - 6:00 pm",
+          "location": "Tsing Yi",
+          "classification": "Account & Relationship Management",
+          "date": "2020-9-23",
+          "responsibilities": "",
+          "requirements": ""
+        }
+      },
+  
+      "18": {
+        "highLights": { 
+          "responsibilities": "",
+          "requirements": ""
+        },
+        "details": {
+          "company": "A leading Chinese bank is recruiting",
+          "jobTitle": "Senior Credit Analyst, Corporate Lending (Banking)",
+          "level": "Easy",
+          "salary": "20-50k",
+          "workHours": "10:00 am - 6:00 pm",
+          "location": "Tsing Yi",
+          "classification": "Account & Relationship Management",
+          "date": "2021-1-10",
+          "responsibilities": "",
+          "requirements": ""
+        }
+      },
+  
+      "19": {
+        "highLights": { 
+          "responsibilities": "",
+          "requirements": ""
+        },
+        "details": {
+          "company": "A leading Chinese bank is recruiting",
+          "jobTitle": "Senior Data Analyst (Core Banking)",
+          "level": "Easy",
+          "salary": "20-50k",
+          "workHours": "10:00 am - 6:00 pm",
+          "location": "Tsing Yi",
+          "classification": "Account & Relationship Management",
+          "date": "2022-10-10",
+          "responsibilities": "",
+          "requirements": ""
+        }
+      },
+
+      "20": {
+        "highLights": { 
+          "responsibilities": "Explore new business opportunities and maintain customer relationship...",
+          "requirements": "3-5 years of relationship management experience "
+        },
+        "details": {
+          "company": "A leading Chinese bank is recruiting",
+          "jobTitle": "Manager, Product Management (Loans and Deposits) (1-year contract)",
+          "level": "Easy",
+          "salary": "20-50k",
+          "workHours": "10:00 am - 6:00 pm",
+          "location": "Tsing Yi",
+          "classification": "Account & Relationship Management",
+          "date": "2023-3-24",
+          "responsibilities": "You have to explore new business opportunities, maintain customer relationship, and provide professional financial solutions.",
+          "requirements": "You are required to have 3-5 years of relationship management experience in corporate banking or commercial banking business, a Bachelor degree or above in Business Administration or related disciplines, and a Strong financial & credit analysis and report writing skills"
+        }
+      },
+  
+      "21": {
+        "highLights": { 
+          "responsibilities": "",
+          "requirements": ""
+        },
+        "details": {
+          "company": "Bank of China is recruiting",
+          "jobTitle": "Manager, Technical Support (Banking)",
+          "level": "Easy",
+          "salary": "20-50k",
+          "workHours": "10:00 am - 7:00 pm",
+          "location": "Tsing Yi",
+          "classification": "Account & Relationship Management",
+          "date": "2023-3-29",
+          "responsibilities": "",
+          "requirements": ""
+        }
+      },
+  
+      "22": {
+        "highLights": { 
+          "responsibilities": "",
+          "requirements": ""
+        },
+        "details": {
+          "company": "A leading Chinese bank is recruiting",
+          "jobTitle": "Assistant Project Manager, Operations Design and Development (1-year contract) (Banking)",
+          "level": "Easy",
+          "salary": "20-50k",
+          "workHours": "10:00 am - 6:00 pm",
+          "location": "Tsing Yi",
+          "classification": "Account & Relationship Management",
+          "date": "2023-4-13",
+          "responsibilities": "",
+          "requirements": ""
+        }
+      },
+  
+      "23": {
+        "highLights": { 
+          "responsibilities": "",
+          "requirements": ""
+        },
+        "details": {
+          "company": "HSBC is recruiting",
+          "jobTitle": "Senior Manager / Manager, Risk and Compliance (Trusts & Fiduciary Services) (Banking)",
+          "level": "Easy",
+          "salary": "20-50k",
+          "workHours": "10:00 am - 6:00 pm",
+          "location": "Tsing Yi",
+          "classification": "Account & Relationship Management",
+          "date": "2023-4-20",
+          "responsibilities": "",
+          "requirements": ""
+        }
+      },
+  
+      "24": {
+        "highLights": { 
+          "responsibilities": "",
+          "requirements": ""
+        },
+        "details": {
+          "company": "A leading Chinese bank is recruiting",
+          "jobTitle": "Assistant Manager, Solution (IT Company)",
+          "level": "Easy",
+          "salary": "20-50k",
+          "workHours": "10:00 am - 6:00 pm",
+          "location": "Tsing Yi",
+          "classification": "Account & Relationship Management",
+          "date": "2023-4-25",
+          "responsibilities": "",
+          "requirements": ""
+        }
+      },
+  
+      "25": {
+        "highLights": { 
+          "responsibilities": "",
+          "requirements": ""
+        },
+        "details": {
+          "company": "A leading Chinese bank is recruiting",
+          "jobTitle": "Head of Business & Risk Analytics, Retail Banking (Banking)",
+          "level": "Easy",
+          "salary": "20-50k",
+          "workHours": "10:00 am - 6:00 pm",
+          "location": "Tsing Yi",
+          "classification": "Account & Relationship Management",
+          "date": "2023-5-5",
+          "responsibilities": "",
+          "requirements": ""
+        }
+      },
+  
+      "26": {
+        "highLights": { 
+          "responsibilities": "",
+          "requirements": ""
+        },
+        "details": {
+          "company": "A leading Chinese bank is recruiting",
+          "jobTitle": "Relationship Manager - Corporate Banking",
+          "level": "Easy",
+          "salary": "20-50k",
+          "workHours": "10:00 am - 6:00 pm",
+          "location": "Tsing Yi",
+          "classification": "Account & Relationship Management",
+          "date": "2023-5-24",
+          "responsibilities": "",
+          "requirements": ""
+        }
+      },
+  
+      "27": {
+        "highLights": { 
+          "responsibilities": "",
+          "requirements": ""
+        },
+        "details": {
+          "company": "A leading Chinese bank is recruiting",
+          "jobTitle": "Manager, Analytics, Planning and Business Finance (Banking)",
+          "level": "Easy",
+          "salary": "20-50k",
+          "workHours": "10:00 am - 6:00 pm",
+          "location": "Tsing Yi",
+          "classification": "Account & Relationship Management",
+          "date": "2023-6-2",
+          "responsibilities": "",
+          "requirements": ""
+        }
+      },
+  
+      "28": {
+        "highLights": { 
+          "responsibilities": "",
+          "requirements": ""
+        },
+        "details": {
+          "company": "A leading Chinese bank is recruiting",
+          "jobTitle": "Manager, SME (Banking)",
+          "level": "Easy",
+          "salary": "20-50k",
+          "workHours": "10:00 am - 6:00 pm",
+          "location": "Tsing Yi",
+          "classification": "Account & Relationship Management",
+          "date": "2023-7-19",
+          "responsibilities": "",
+          "requirements": ""
+        }
+      },
+  
+      "29": {
+        "highLights": { 
+          "responsibilities": "",
+          "requirements": ""
+        },
+        "details": {
+          "company": "A leading Chinese bank is recruiting",
+          "jobTitle": "System Analyst (1-year contract) (Banking)",
+          "level": "Easy",
+          "salary": "20-50k",
+          "workHours": "10:00 am - 6:00 pm",
+          "location": "Tsing Yi",
+          "classification": "Account & Relationship Management",
+          "date": "2023-8-1",
+          "responsibilities": "",
+          "requirements": ""
+        }
+      },
+
+      "30": {
+        "highLights": { 
+          "responsibilities": "Explore new business opportunities and maintain customer relationship...",
+          "requirements": "3-5 years of relationship management experience "
+        },
+        "details": {
+          "company": "Hello",
+          "jobTitle": "Relationship Manager - Corporate Banking",
+          "level": "Easy",
+          "salary": "20-50k",
+          "workHours": "10:00 am - 6:00 pm",
+          "location": "Tsing Yi",
+          "classification": "Account & Relationship Management",
+          "date": "2023-9-15",
+          "responsibilities": "You have to explore new business opportunities, maintain customer relationship, and provide professional financial solutions.",
+          "requirements": "You are required to have 3-5 years of relationship management experience in corporate banking or commercial banking business, a Bachelor degree or above in Business Administration or related disciplines, and a Strong financial & credit analysis and report writing skills"
+        }
+      },
+  
+      "31": {
+        "highLights": { 
+          "responsibilities": "",
+          "requirements": ""
+        },
+        "details": {
+          "company": "Bank of China is recruiting",
+          "jobTitle": "Branch Manager / Team Manager, Retail Banking",
+          "level": "Easy",
+          "salary": "20-50k",
+          "workHours": "10:00 am - 7:00 pm",
+          "location": "Tsing Yi",
+          "classification": "Account & Relationship Management",
+          "date": "2024-3-29",
+          "responsibilities": "",
+          "requirements": ""
+        }
+      },
+  
+      "32": {
+        "highLights": { 
+          "responsibilities": "",
+          "requirements": ""
+        },
+        "details": {
+          "company": "A leading Chinese bank is recruiting",
+          "jobTitle": "Senior Insurance Specialist - International and Local Banks",
+          "level": "Easy",
+          "salary": "20-50k",
+          "workHours": "10:00 am - 6:00 pm",
+          "location": "Tsing Yi",
+          "classification": "Account & Relationship Management",
+          "date": "2024-4-1",
+          "responsibilities": "",
+          "requirements": ""
+        }
+      },
+  
+      "33": {
+        "highLights": { 
+          "responsibilities": "",
+          "requirements": ""
+        },
+        "details": {
+          "company": "HSBC is recruiting",
+          "jobTitle": "Relationship Manager - Corporate Banking",
+          "level": "Easy",
+          "salary": "20-50k",
+          "workHours": "10:00 am - 6:00 pm",
+          "location": "Tsing Yi",
+          "classification": "Account & Relationship Management",
+          "date": "2024-4-5",
+          "responsibilities": "",
+          "requirements": ""
+        }
+      },
+  
+      "34": {
+        "highLights": { 
+          "responsibilities": "",
+          "requirements": ""
+        },
+        "details": {
+          "company": "A leading Chinese bank is recruiting",
+          "jobTitle": "Relationship Manager - Corporate Banking",
+          "level": "Easy",
+          "salary": "20-50k",
+          "workHours": "10:00 am - 6:00 pm",
+          "location": "Tsing Yi",
+          "classification": "Account & Relationship Management",
+          "date": "2024-4-8",
+          "responsibilities": "",
+          "requirements": ""
+        }
+      },
+  
+      "35": {
+        "highLights": { 
+          "responsibilities": "",
+          "requirements": ""
+        },
+        "details": {
+          "company": "A leading Chinese bank is recruiting",
+          "jobTitle": "Relationship Manager - Corporate Banking",
+          "level": "Easy",
+          "salary": "20-50k",
+          "workHours": "10:00 am - 6:00 pm",
+          "location": "Tsing Yi",
+          "classification": "Account & Relationship Management",
+          "date": "2024-4-15",
+          "responsibilities": "",
+          "requirements": ""
+        }
+      },
+  
+      "36": {
+        "highLights": { 
+          "responsibilities": "",
+          "requirements": ""
+        },
+        "details": {
+          "company": "A leading Chinese bank is recruiting",
+          "jobTitle": "Relationship Manager - Corporate Banking",
+          "level": "Easy",
+          "salary": "20-50k",
+          "workHours": "10:00 am - 6:00 pm",
+          "location": "Tsing Yi",
+          "classification": "Account & Relationship Management",
+          "date": "2024-4-24",
+          "responsibilities": "",
+          "requirements": ""
+        }
+      },
+  
+      "37": {
+        "highLights": { 
+          "responsibilities": "",
+          "requirements": ""
+        },
+        "details": {
+          "company": "A leading Chinese bank is recruiting",
+          "jobTitle": "Relationship Manager - Corporate Banking",
+          "level": "Easy",
+          "salary": "20-50k",
+          "workHours": "10:00 am - 6:00 pm",
+          "location": "Tsing Yi",
+          "classification": "Account & Relationship Management",
+          "date": "2024-4-26",
+          "responsibilities": "",
+          "requirements": ""
+        }
+      },
+  
+      "38": {
+        "highLights": { 
+          "responsibilities": "",
+          "requirements": ""
+        },
+        "details": {
+          "company": "A leading Chinese bank is recruiting",
+          "jobTitle": "Relationship Manager - Corporate Banking",
+          "level": "Easy",
+          "salary": "20-50k",
+          "workHours": "10:00 am - 6:00 pm",
+          "location": "Tsing Yi",
+          "classification": "Account & Relationship Management",
+          "date": "2024-5-4",
+          "responsibilities": "",
+          "requirements": ""
+        }
+      },
+  
+      "39": {
+        "highLights": { 
+          "responsibilities": "",
+          "requirements": ""
+        },
+        "details": {
+          "company": "A leading leading bank in Hong Kong is recruiting",
+          "jobTitle": "Relationship Managers - High Net Worth Clients",
+          "level": "Easy",
+          "salary": "20-50k",
+          "workHours": "Full time",
+          "location": "Hong Kong",
+          "classification": "Account & Relationship Management",
+          "date": "2024-5-26",
+          "responsibilities": "<ul><li>Promote retail banking and wealth management services and products to high-net-worth clients</li><li>Acquire new customers through sales and marketing activities, and identify potential business opportunities for sustainable business growth</li><li>Provide differentiated services to customers and achieve business targets</li><li>Establish long-term relationships with customers and grow the portfolio</li><li>Ensure compliance with the Bank’s policies, procedures and regulatory guidelines</li></ul> ",
+          "requirements": "<ul><li>University graduate preferred, preferably in finance, business or a related discipline</li><li>Minimum of 4-5 years' working experience in banking sector, with solid sales and marketing exposure in serving high net worth clients.</li><li>Pass in the Insurance Intermediaries Qualifying Examinations (IIQE Paper 1, 2, 3 or equivalent)</li><li>Pass in the Hong Kong Securities Institute Licensing Examination or an Exempted / Qualified Securities Dealer (HKSI Paper 1, 7, 8 or equivalent)</li><li>Expert knowledge in financial planning and wealth products</li><li>Self-motivated and able to work under pressure</li><li>Proficient in both spoken and written English and Chinese, knowledge of Putonghua will be an advantage</li></ul>"
+        }
+      }
+    }
+  }
+}
+

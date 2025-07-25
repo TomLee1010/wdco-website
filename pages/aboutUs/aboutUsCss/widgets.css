@@ -1,0 +1,252 @@
+/* Start of about us widgets (Part 1) --> */
+
+.about-us-widgets-container{
+  display: flex;
+  justify-content: center;
+  height: 500px;
+  width: 100%;
+  background-color: rgb(250, 250, 250);
+  gap: 60px;
+}
+
+.widget-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 500px;
+  height: 300px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding: 10px;
+  gap: 8px;
+  margin-top: -100px;
+}
+
+.widget-title{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 85%;
+}
+
+.widget-title h2{
+  font-size: 1.6rem;
+}
+
+.widget-title img{
+  object-fit: cover;
+  width: 40px;
+  height: 40px;
+}
+
+.widget-container p{
+  font-size: 1.1rem;
+  margin: 0;
+  width: 85%;
+  color: rgb(70, 70, 70);
+}
+
+@media(max-width: 1166px){
+  .about-us-widgets-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 700px;
+  }
+  .widget-container{
+    margin: 0;
+    padding-bottom: 60px;
+    width: 90%;
+    height: auto;
+  }
+  #first-widget{
+    margin-top: -350px;
+  }
+}
+
+@media (max-width:950px){
+  .widget-title h2{
+    font-size: 1.5rem;
+  }
+  .widget-title img{
+    width: 37px;
+    height: 37px;
+  }
+  .widget-container p{
+    font-size: 1rem;
+  }
+  .about-us-widgets-container{
+    height: 780px;
+  }
+  #first-widget{
+    margin-top: -460px;
+  }
+}
+
+@media (max-width:770px){
+  .widget-title h2{
+    font-size: 1.4rem;
+  }
+  .widget-title img{
+    width: 37px;
+    height: 37px;
+  }
+  .widget-container p{
+    font-size: 0.95rem;
+  }
+  .about-us-widgets-container{
+    height: 700px;
+  }
+  #first-widget{
+    margin-top: -360px;
+  }
+}
+
+@media (max-width:600px){
+  .widget-title h2{
+    font-size: 1.3rem;
+  }
+  .widget-title img{
+    width: 33px;
+    height: 33px;
+  }
+
+  .about-us-widgets-container{
+    height: 700px;
+  }
+  #first-widget{
+    margin-top: -300px;
+  }
+}
+
+/* End of about us widgets (Part 1) --> */
+
+/* Start of about us widgets (Part 2) --> */
+
+.about-us-widgets-container-2{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 550px;
+  width: 100%;
+  background-color: rgb(250, 250, 250);
+  gap: 200px;
+}
+
+.inner-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 500px;
+  width: 100%;
+  margin-top: -180px;
+}
+
+.map-container p{
+  width: 500px;
+  text-align: center;
+  font-size: 1.2rem;
+  color: rgb(70, 70, 70);
+  margin-top: 50px;
+}
+
+.video-container{
+  display: flex;
+  justify-content: center;
+}
+
+.about-us-widgets-container-2 video{
+  width: 800px;
+  height: 500px;
+  box-shadow: rgba(99, 99, 99, 0.3) 0px 2px 8px 0px;
+}
+
+@media(max-width: 1166px){
+  .about-us-widgets-container-2{
+    height: 420px;
+    margin-top: -50px;
+    padding-bottom: 50px;
+  }
+  .about-us-widgets-container-2 video{
+    width: 700px;
+    height: 450px;
+  }
+  .inner-container{
+    margin-top: -150px;
+  }
+  .map-container p{
+    font-size: 1.1rem;
+    margin-top: 40px;
+  }
+}
+
+@media (max-width:950px){
+  .about-us-widgets-container-2{
+    margin-top: -150px;
+    padding-bottom: 10px;
+  }
+  .about-us-widgets-container-2 video{
+    width: 600px;
+    height: 400px;
+  }
+}
+
+@media (max-width:770px){
+  .about-us-widgets-container-2{
+    margin-top: -70px;
+    height: 350px;
+  }
+  .about-us-widgets-container-2 video{
+    width: 500px;
+    height: 350px;
+  }
+  .map-container p{
+    font-size: 0.9rem;
+    margin-top: 40px;
+    width: 360px;
+  }
+}
+
+@media (max-width:600px){
+  .about-us-widgets-container-2{
+    margin-top: -25px;
+    height: 300px;
+  }
+  .about-us-widgets-container-2 video{
+    width: 90%;
+    height: auto;
+  
+  }
+  .map-container{
+    display: flex;
+    justify-content: center;
+  }
+  .map-container p{
+    font-size: 0.9rem;
+    margin-top: 30px;
+    width: 80%;
+  }
+}
+
+@media (max-width:500px){
+  .about-us-widgets-container-2{
+    margin-top: 0px;
+    height: 230px;
+  }
+}
+
+@media (max-width:400px){
+  .about-us-widgets-container-2{
+    margin-top: 10px;
+    height: 180px;
+  }
+}
+
+@media (max-width:350px){
+  .about-us-widgets-container-2{
+    margin-top: 40px;
+    height: 160px;
+  }
+}
+/* End of about us widgets (Part 2) --> */

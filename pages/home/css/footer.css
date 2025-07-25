@@ -1,0 +1,401 @@
+footer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 100%;
+  background-color: #212428;
+  color: #b2b2b2;
+  white-space: nowrap;
+}
+
+footer .footer-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+}
+
+footer .footer-container .footer-btns-container{
+  display: flex;
+  height: 30px;
+  width: 100%;
+  align-items: center;
+  gap: 15vw;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+footer .bold{
+  font-weight: bold;
+  font-size: 1rem;
+  color: #BFBFBF;
+}
+
+footer .contact-container{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: auto;
+  margin-right: 90px;
+}
+
+footer .contact-container a{
+  text-decoration: none;
+}
+
+footer .contact-container .contact-info{
+  margin-left: 20px;
+  color: #B2B2B2;
+  font-size: 0.9rem;
+}
+
+footer .followUs-container{
+  display: flex;
+  align-items: center;
+  margin-left: 90px;
+}
+
+footer .followUs-container a{
+  text-decoration: none;
+}
+
+footer .socialMedia-link{
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+  color: #B2B2B2;
+  font-size: 0.9rem;
+}
+
+footer .socialMedia-link:hover{
+  color: #ffffff;
+}
+
+footer .socialMedia-link img{
+  object-fit: cover;
+  width: 30px;
+  display: none;
+}
+
+footer .wdc-logo-1{
+  object-fit: cover;
+  width: 220px;
+  margin-bottom: 30px;
+}
+
+footer .policies{
+  border-top: solid 3px rgba(70, 70, 70, 0.2);
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font-size: 0.9rem;
+  margin-top: 10px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  color: #7F7F7F;
+  gap: 20px;
+}
+
+footer .policies .padding-container{
+  display: flex;
+  margin-right: 60px;
+  gap: 20px;
+}
+
+footer .policies .padding-container a{
+  text-decoration: none;
+  color: #7F7F7F;
+  transition: color 0.1s;
+}
+
+footer .policies .padding-container a:hover{
+  color: #696969;
+}
+
+footer .agency-info{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}
+.agency-info-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer .agency-info a{
+  text-decoration: none;
+  color: #BFBFBF;
+}
+
+footer .footer-row img{
+  display: none;
+}
+
+@media(max-width: 1300px){
+  
+  footer .footer-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  footer .footer-container{
+    align-items: flex-start;
+  }
+  footer .agency-info{
+    text-align: left;
+  }
+  footer .footer-container .footer-btns-container{
+    flex-direction: column;
+    align-items: flex-start;
+    height: 200px;
+    gap: 10px;
+    margin-left: 60px;
+    margin-top: 30px;
+    margin-bottom: 0px;
+  }
+  footer .followUs-container{
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: unset;
+    margin-right: unset;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  footer .contact-container{
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: unset;
+    margin-right: unset;
+  }
+  footer .socialMedia-link img{
+    display: flex;
+  }
+  footer .socialMedia-link{
+    margin-left: unset;
+    gap: 10px;
+  }
+  footer .contact-container .contact-info{
+    margin-left: unset;
+  }
+  footer .bold{
+    color: #ffffff;
+    font-size: 1.1rem;
+  }
+  footer .wdc-logo-1{
+    display: none;
+  }
+  footer .footer-row{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin-top: 60px;
+  }
+  footer .footer-row img{
+    display: block;
+    margin-left: auto;
+    margin-right: 60px;
+  }
+  .agency-info-container{
+    align-items: flex-start;
+  }
+  footer .agency-info{
+    margin-left: 60px;
+  }
+  footer .policies{
+    padding-bottom: 12px;
+  }
+  footer .policies .copyright{
+    margin-right: auto;
+    margin-left: 60px;
+  }
+  footer .policies .padding-container{
+    margin-right: 60px;
+    font-size: 0.8rem;
+  }
+}
+
+@media(max-width: 900px){
+  footer{
+    margin-top: -5px;
+  }
+  footer .footer-container .footer-btns-container{
+    margin-left: 40px;
+  }
+  footer .agency-info{
+    margin-left: 40px;
+  }
+  footer .footer-row img{
+    margin-right: 40px;
+  }
+}
+
+@media(max-width: 800px){
+  footer .bold{
+    font-size: 0.95rem;
+  }
+  footer .socialMedia-link{
+    font-size: 0.85rem;
+  }
+  footer .socialMedia-link img{
+    width: 20px;
+  }
+  footer .contact-container .contact-info{
+    font-size: 0.85rem;
+  }
+  footer .agency-info{
+    font-size: 0.85rem;
+    margin-left: 40px;
+    margin-right: auto;
+  }
+  footer .wdc-logo-1{
+    width: 200px;
+  }
+  footer .policies{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+  footer .policies .copyright{
+    margin: 0;
+    padding-bottom: 5px;
+    font-size: 0.85rem;
+  }
+  footer .policies .padding-container{
+    margin: 0;
+    font-size: 0.7rem;
+  }
+  footer .footer-row{
+    margin-top: 15px;
+  }
+}
+
+@media(max-width: 700px){
+  footer .footer-row{
+    margin-top: 50px;
+  }
+  footer .footer-row .wdc-logo-1{
+    display: none;
+  }
+}
+
+@media(max-width: 550px){
+  footer .footer-container .footer-btns-container{
+    margin-left: 30px;
+  }
+  footer .agency-info{
+    margin-left: 30px;
+  }
+}
+
+@media(max-width: 470px){
+  footer .agency-info{
+    font-size: 0.8rem;
+    flex-direction: column;
+    text-align: left;
+  }
+  footer .footer-row{
+    margin-top: 45px;
+  }
+  .agency-info-container{
+    gap: 5px;
+  }
+}
+
+@media(max-width: 400px){
+  footer .footer-container .footer-btns-container{
+    margin-left: 20px;
+  }
+  footer .agency-info{
+    margin-left: 20px;
+  }
+  footer .policies{
+    min-width: 320px;
+  }
+  footer .policies .copyright{
+    font-size: 0.7rem;
+  }
+}
+
+
+
+/*
+@media(max-width: 800px){
+  footer{
+    height: 520px;
+  }
+  footer .bold{
+    font-size: 0.95rem;
+  }
+  footer .socialMedia-link{
+    font-size: 0.85rem;
+  }
+  footer .socialMedia-link img{
+    width: 20px;
+  }
+  footer .footer-container .footer-btns-container{
+    margin-top: 25px;
+    margin-left: 30px;
+  }
+  footer .contact-container .contact-info{
+    font-size: 0.85rem;
+  }
+  footer .agency-info{
+    font-size: 0.85rem;
+    margin-left: 30px;
+    margin-right: auto;
+  }
+  footer .footer-row{
+    margin-top: 40px;
+    flex-direction: column;
+    gap: 20px;
+  }
+  footer .wdc-logo-1{
+    width: 200px;
+  }
+  footer .policies{
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.85rem;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 0;
+    gap: 5px;
+  }
+  footer .policies .copyright{
+    margin-right: unset;
+    margin-left: unset;
+  }
+}
+
+
+
+
+
+
+
+/*
+@media(max-width: 700px){
+  footer .wdc-logo-1{
+    width: 170px;
+  }
+}
+
+@media(max-width: 500px){
+  footer .wdc-logo-1{
+    width: 150px;
+  }
+  footer .footer-row img{
+    margin-right: 20px;
+  }
+}

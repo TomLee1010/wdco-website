@@ -1,0 +1,90 @@
+body{
+  background-color: rgb(250, 250, 250);
+}
+
+.aboutUsIntro{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+  background-image: url("../aboutUsImg/background.webp");
+  background-repeat: no-repeat;
+  background-position: 50% 35%;
+  background-size: cover;
+  height: 650px;
+}
+
+.aboutUsIntro .aboutUsIntroText{
+  margin-top: -100px;
+  width: 1080px;
+  color: white;
+  position: absolute;
+}
+
+.aboutUsIntro .aboutUsIntroText h1{
+  font-size: 3.6rem;
+}
+
+.aboutUsIntro .aboutUsIntroText p{
+  font-size: 1.4rem;
+  width: 65%;
+}
+
+@media(max-width: 1166px){
+  .aboutUsIntro .aboutUsIntroText{
+    width: 90%;
+  }
+}
+
+@media (max-width:950px){
+  .aboutUsIntro{
+    height: 600px;
+  }
+  .aboutUsIntro .aboutUsIntroText h1{
+    font-size: 3.1rem;
+  }
+  .aboutUsIntro .aboutUsIntroText p{
+    font-size: 1.19rem;
+  }
+}
+
+@media (max-width:770px){
+
+  .aboutUsIntro .aboutUsIntroText h1{
+    font-size: 3rem;
+  }
+  .aboutUsIntro .aboutUsIntroText p{
+    font-size: 1.18rem;
+  }
+}
+
+@media (max-width:680px){
+  
+  .aboutUsIntro .aboutUsIntroText h1{
+    font-size: 2.9rem;
+  }
+  .aboutUsIntro .aboutUsIntroText p{
+    font-size: 1.17rem;
+  }
+}
+
+@media (max-width:600px){
+  .aboutUsIntro .aboutUsIntroText h1{
+    font-size: 2.8rem;
+  }
+  .aboutUsIntro .aboutUsIntroText p{
+    font-size: 1.16rem;
+    width: 100%;
+  }
+}
+
+@media (max-width:420px){
+  
+  .aboutUsIntro .aboutUsIntroText h1{
+    font-size: 2.6rem;
+  }
+  .aboutUsIntro .aboutUsIntroText p{
+    font-size: 1.14rem;
+  }
+}

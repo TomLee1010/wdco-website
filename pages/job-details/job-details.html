@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Details</title>
+  <link rel="stylesheet" href="../home/css/general.css">
+  <link rel="stylesheet" href="../home/css/navbar.css">
+  <link rel="stylesheet" href="../home/css/footer.css">
+  <link rel="stylesheet" href="jobDetailsCss/jobsSection.css">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+    <!-- Start of navbar -->
+    <nav>
+      <div class="outer-navbar">
+        <div class="navbar">
+          <div class = "company-icon">
+            <a href="../../index.html"><img src="../home/images/wdc_icon_full_name.webp"></a>
+          </div>
+          <ul class="links">
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../aboutUs/aboutUs.html">About Us</a></li>
+            <li><a href="../hotJobs/hotJobs.html">Hot Jobs</a></li>
+            <li><a href="../contactUs/contactUs.html">Contact</a></li>
+          </ul>
+          <div class="right-links">
+            <a href="../employer/employer.html" class="right-page-link">
+              <div class="right-page">
+                <img src="../home/images/employerImg.webp">
+              <span>Employer</span>
+              </div>
+            </a>
+            <a href="../privacyPolicy/privacyPolicy.html" class="right-page-link">
+              <div class="right-page">
+                <img src="../home/images/privacyPolicyImg.webp" class="privacy-policy-img">
+              <span>Privacy Policy</span>
+              </div>
+            </a>
+          </div>
+          <div class="menu">
+            <button class="menu-options" onclick=menuArrowRotation()>
+              Home
+              <img id="menu-arrow" src="../home/images/downward-arrow.webp">
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="menu-container" id="dropdown-menu">
+        <div class="list-container">
+          <ul class="menu-links">
+            <div><li><a href="../../index.html">Home</a></li></div>
+            <div><li><a href="../aboutUs/aboutUs.html">About Us</a></li></div>
+            <div><li><a href="../hotJobs/hotJobs.html">Hot Jobs</a></li></div>
+            <div><li><a href="../contactUs/contactUs.html">Contact</a></li></div>
+            <div><li><a href="../employer/employer.html">Employer</a></li></div>
+            <div><li><a href="../privacyPolicy/privacyPolicy.html">Privacy Policy</a></li></div>
+          </ul>
+          <!--<div class="language-container"><div class="language"><img src="pages/home/images/language-img.webp"><span>En</span></div></div>-->
+        </div>
+      </div>
+    </nav>
+    <!-- End of navbar -->
+    </header>
+    <script src="../home/javascripts/styling.js"></script>
+    <div class="job-details-container" style="display: flex; justify-content: center;">
+        <div class="job-details" id="job-details-div">
+            <div class="inner-container">
+                <div class="controls">
+                  <a href="http://wa.link/ksmjnu" target="_blank" rel="noopener noreferrer" class="whatsapp-link">whatsapp<img src="../hotJobs/hotJobsImg/whatsapp.webp"></a>
+                  <!--<a href="#" target="_blank" rel="noopener noreferrer" class="new-tab">new tab<img src="../hotJobs/hotJobsImg/newTab.webp"></a>-->
+                  <!--<button class="share-btn">share<img src="../hotJobs/hotJobsImg/share.webp"></button>-->
+                </div>
+                <div class="detail-bannar-container"><img class="job-bannar" src="../hotJobs/hotJobsImg/Banks.webp"></div>
+                <div class="inner-alignment">
+                  <div class="company-name"><span class="company" id="item-company-name"></span><button class="question-btn"><img src="../home/images/question.webp"></button></div>
+                  <h2 id="item-job-title"></h2>
+                  <span class="outer-span">Job Level:<span id="item-level"></span></span>
+                  <span class="outer-span">Salary:<span id="item-salary"></span>HKD</span>
+                  <span class="outer-span">Work hours:<span id="item-workhours"></span></span>
+                  <span class="outer-span">Location:<span id="item-location"></span></span>
+                  <span class="outer-span">Profession:<span id="item-classification"></span></span>
+                  <span class="date">Posted on <span id="item-date"></span></span>
+                  <button class="apply-btn">Apply</button>
+                  <h3>Responsibilities</h3>
+                  <dl id="duties"></dl>
+                  <h3>Requirements</h3>
+                  <dl id="requirements"></dl>
+                </div>
+                <div class="advice">
+                  <div class="advice-title">
+                    <img src="../hotJobs/hotJobsImg/lightBulb.webp">
+                    <h4>Support</h4>
+                  </div>
+                  <p>Wondering whether this job is suitable for you? Seek for our advice now through whatsapp on the link above, we will answer all of your queries and provide all the support you need.</p>
+                </div>
+                <div class="white-space"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="job-details.js"></script>
+    <!-- Start of footer -->
+    <footer>
+    <div class="footer-container">
+      <div class="footer-btns-container">
+        <div class="followUs-container">
+          <span class="bold">Follow Us</span>
+          <a href="https://www.instagram.com/tomlee_wdco/"><div class="socialMedia-link"><img src="../home/images/instagramIcon.webp"><span>Instagram</span></div></a>
+          <a href="https://www.facebook.com/wdchk"><div class="socialMedia-link"><img src="../home/images/faceBookIcon.webp"><span>Facebook</span></div></a>
+          <a href="https://www.linkedin.com/company/wealth-dimensions-consultancy-limited/posts/?feedView=all"><div class="socialMedia-link"><img src="../home/images/LinkedInIcon.webp"><span>LinkedIn</span></div></a>
+        </div>
+        <div class="contact-container">
+          <span class="bold">Contact</span>
+          <span class="contact-info gmail">info@wdco.com.hk</span></a>
+          <span class="contact-info">+852 3571 9903</span>
+        </div>
+      </div>
+      <img class="wdc-logo-1" src="../home/images/WdcLogo.webp">
+      <div class="footer-row">
+        <div class="agency-info-container">
+          <span class="agency-info">Employment Agency Licence Number :<span>72014</span></span>
+          <span class="agency-info">Labour Department Employment Agency :<span><a href="https://www.eaa.labour.gov.hk">www.eaa.labour.gov.hk</a></span></span>
+        </div>
+        <img class="wdc-logo-1" src="../home/images/WdcLogo.webp">
+      </div>
+      <div class="policies">
+        <span class="copyright">©2015-2024 by Wealth Dimensions Consultancy Limited</span>
+        <div class="padding-container">
+          <span>Terms and Conditions</span>
+          <a href="../privacyPolicy/privacyPolicy.html"><span>Privacy Policy</span></a>
+        </div>
+      </div>
+    </div>
+    </footer>
+    <!-- End of footer -->
+</body>
+</html>

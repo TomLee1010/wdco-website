@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wealth Dimension</title>
+  <!-- Start of CSS Links -->
+  <link rel="stylesheet" href="pages/home/css/general.css">
+  <link rel="stylesheet" href="pages/home/css/navbar.css">
+  <link rel="stylesheet" href="pages/home/css/searchbar.css">
+  <link rel="stylesheet" href="pages/home/css/banner.css">
+  <link rel="stylesheet" href="pages/home/css/jobs.css">
+  <link rel="stylesheet" href="pages/home/css/wdc_intro.css">
+  <link rel="stylesheet" href="pages/home/css/image_slider.css">
+  <link rel="stylesheet" href="pages/home/css/wdcIG.css">
+  <link rel="stylesheet" href="pages/home/css/footer.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <!-- Start of Font Style -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap" rel="stylesheet">
+  <!-- End of Font Style -->
+  <!-- End of CSS Links -->
+  <!-- Start of script -->
+  <!-- End of script -->
+</head>
+<body>
+  <header>
+    <!-- Start of navbar -->
+    <nav>
+      <div class="outer-navbar" id="navbar">
+        <div class="navbar">
+          <div class = "company-icon">
+            <a href="index.html"><img src="pages/home/images/wdc_icon_full_name.webp" alt="Wealth Dimensions Consultancy logo"></a>
+          </div>
+          <ul class="links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="pages/aboutUs/aboutUs.html">About Us</a></li>
+            <li><a href="pages/hotJobs/hotJobs.html">Hot Jobs</a></li>
+            <li><a href="pages/contactUs/contactUs.html">Contact</a></li>
+          </ul>
+          <div class="right-links">
+            <a href="pages/employer/employer.html" class="right-page-link">
+              <div class="right-page">
+                <img src="pages/home/images/employerImg.webp">
+              <span>Employer</span>
+              </div>
+            </a>
+            <a href="pages/privacyPolicy/privacyPolicy.html" class="right-page-link">
+              <div class="right-page">
+                <img src="pages/home/images/privacyPolicyImg.webp" class="privacy-policy-img">
+              <span>Privacy Policy</span>
+              </div>
+            </a>
+          </div>
+          <!-- <div class="language-container"><div class="language"><img src="pages/home/images/language-img.webp"><span>En</span></div></div> -->
+          <div class="menu">
+            <button class="menu-options" onclick=menuArrowRotation() aria-label="Menu button">
+              Home
+              <img id="menu-arrow" src="pages/home/images/downward-arrow.webp">
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="menu-container" id="dropdown-menu">
+        <div class="list-container">
+          <ul class="menu-links">
+            <div class="active"><li><a href="#">Home</a></li></div>
+            <div><li><a href="pages/aboutUs/aboutUs.html">About Us</a></li></div>
+            <div><li><a href="pages/hotJobs/hotJobs.html">Hot Jobs</a></li></div>
+            <div><li><a href="pages/contactUs/contactUs.html">Contact</a></li></div>
+            <div><li><a href="pages/employer/employer.html">Employer</a></li></div>
+            <div><li><a href="pages/privacyPolicy/privacyPolicy.html">Privacy Policy</a></li></div>
+          </ul>
+          <!--<div class="language-container"><div class="language"><img src="pages/home/images/language-img.webp"><span>En</span></div></div>-->
+        </div>
+      </div>
+    </nav>
+    <!-- End of navbar -->
+    <!-- Start of search bar -->
+    <div class="searchbar-container" id="index-searchbar-container">
+      <h1>Finding a <span>job?</span><br>You are in the right place!</h1>
+      <p>Search for your dream job with keywords and additional filter below.</p>
+      <div class="searchbar">
+        <div class="searchbar-styling">
+          <input class="search" id="search-input" type="search" name="searchBar" placeholder="Job Search...">
+          <button class="more-options-btn" onclick=searchArrowRotation() aria-label="More options button">
+            More options
+            <img id="search-arrow" src="pages/home/images/downward-arrow.webp">
+          </button>
+          <a href="pages/hotJobs/hotJobs.html">
+            <button class="search-btn" id="user-search-btn" aria-label="Search button">
+              <img src="pages/home/images/search-icon.webp">
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="more-options-container">
+        <div class="search-options-menu">
+          <select class="sorting-btn" id="select-level">
+            <option>All Levels</option>
+            <option>Easy</option>
+            <option>Regular</option>
+            <option>High Level</option>
+          </select>
+          <label>from HKD (Monthly):</label>
+          <select class="sorting-btn" id="from-amount">
+            <option>$0</option>
+            <option>$10k</option>
+            <option>$20k</option>
+            <option>$30k</option>
+            <option>$40k</option>
+            <option>$50k</option>
+            <option>$60k</option>
+            <option>$70k</option>
+            <option>$80k</option>
+            <option>$90k</option>
+            <option>$100k</option>
+          </select>
+          <label>to HKD (Monthly):</label>
+          <select class="sorting-btn" id="to-amount">
+            <option>$10k</option>
+            <option>$20k</option>
+            <option>$30k</option>
+            <option>$40k</option>
+            <option>$50k</option>
+            <option>$60k</option>
+            <option>$70k</option>
+            <option>$80k</option>
+            <option>$90k</option>
+            <option selected>$100k</option>
+          </select>  
+        </div>
+    </div>
+    <!-- End of search bar -->
+    <!-- Start of advertisement banner -->
+    <!--
+    <div class="banner-container">
+      <div class="banner">
+        <img src="pages/home/images/banner_1.webp">
+      </div>
+    </div>
+    -->
+    <!-- End of advertisement banner -->
+  </header>
+  <script src="pages/home/javascripts/styling.js"></script>
+  <!-- Start of job list -->
+  <section class="job-section-container" id="job_section_container">
+    <div class="job_sorting_results">
+      <div class="sort_details">
+        <h3>Top 10 Hot Jobs</h3>
+      </div>
+    </div>
+    <div class="job-section" id="job_section">
+      <div class="scroll-btn-left">
+        <button id="move_left" aria-label="Move left button"><img id="move_left_img" src="pages/home/images/move-left-arrow.webp"></button>
+      </div>
+      <div id="job-scroll">
+        <!-- Start of job items -->
+        <!--
+        <div class="job-container">
+          <div class="job-heading">
+            <h3>A leading Chinese bank<br> 
+              is recruiting</h3>
+            <button><img src="pages/home/images/question.webp"></button>
+          </div>
+          <div class="job-title">
+            <h4>Relationship Manager - Corporate Banking<br>(WDCO - CBRM)</h4>
+          </div>
+          <div class="job-desc-container">
+            <div class="job-desc">
+              <span>Salary: <span>~20-50k HKD</span></span>
+              <span>Location: <span>Tsing Yi</span></span><br>
+              <span class="date-of-post">Posted on<span>2024-3-30</span></span>
+            </div>
+            <div class="detail-btns">
+              <button class="detail">Details</button>
+              <button class="share"><img src="pages/home/images/share-btn.webp"></button>
+            </div>
+          </div>
+        </div>
+        -->
+        <!-- Start of job items -->
+      </div>
+      <div class="scroll-btn-right">
+        <button id="move_right" aria-label="Move right button"><img src="pages/home/images/move-right-arrow.webp"></button>
+      </div>
+    </div>
+  </section>
+  <!--
+  <div class="expand-downwards">
+    <button id="expand-btn" onclick="expand_job_list()"><img src="pages/home/images/expand-arrow.webp"></button>
+  </div>
+  -->
+  <script src="pages/home/javascripts/script.js"></script>
+  <!-- End of job list -->
+  <section>
+    <div class="wdc-intro-container">
+      <div class="wdc-intro">
+        <h2>Wealth Dimensions<br>Consultancy Limited</h2>
+        <p>is a professional recruitment firm specialized in placing managerial and functional talents for Banking, Insurance, Financial Services and Information Technology industry.</p>
+        <a href="pages/contactUs/contactUs.html"><button>Contact Us</button></a>
+      </div>
+      <div id="imageSliderContainer">
+        <div class="imageSlider">
+          <div class="slides">
+            <!-- radio buttons start-->
+            <input type="radio" name="radio_btn" id="radio1">
+            <input type="radio" name="radio_btn" id="radio2">
+            <input type="radio" name="radio_btn" id="radio3">
+            <input type="radio" name="radio_btn" id="radio4">
+            <input type="radio" name="radio_btn" id="radio5">
+            <!-- radio buttons end-->
+            <!-- slide images start-->
+            <div class="slide first">
+              <img src="pages/home/images/slider_images/1.webp" alt="">
+            </div>
+            <div class="slide">
+              <img src="pages/home/images/slider_images/2.webp" alt="">
+            </div>
+            <div class="slide">
+              <img src="pages/home/images/slider_images/3.webp" alt="">
+              
+            </div>
+            <div class="slide">
+              <img src="pages/home/images/slider_images/4.webp" alt="">
+            </div>
+            <div class="slide">
+              <img src="pages/home/images/slider_images/5.webp" alt="">
+            </div>
+            <!-- slide images end-->
+            <!-- automatic navigation start-->
+            <div class="navigation-auto">
+              <div class="auto-btn1"></div>
+              <div class="auto-btn2"></div>
+              <div class="auto-btn3"></div>
+              <div class="auto-btn4"></div>
+              <div class="auto-btn5"></div>
+            </div>
+            <!-- automatic navigation end-->
+          </div>
+          <!-- manual navigation start-->
+          <div class="navigation-manual">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+            <label for="radio4" class="manual-btn"></label>
+            <label for="radio5" class="manual-btn"></label>
+          </div>
+          <!-- manual navigation end-->
+        </div>
+        <script type="text/javascript">
+            var counter = 1;
+            setInterval(function(){
+              document.getElementById('radio' + counter).checked = true;
+              counter++;
+              if (counter > 5){
+                counter = 1;
+              }
+            }, 8000)        
+      
+            // Add event listeners for navigation buttons
+            const navButtons = document.querySelectorAll('.manual-btn');
+            navButtons.forEach((button, index) => {
+              button.addEventListener('click', () => {
+                // Update the slide index based on the clicked button
+                counter = index + 1;
+                document.getElementById('radio' + counter).checked = true;
+          });
+        });
+        </script>
+      </div>
+    </div>
+  </section>
+  <!-- Start of the IG Widget-->
+  <!-- End of the IG Widget-->
+  <!-- Start of footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-btns-container">
+        <div class="followUs-container">
+          <span class="bold">Follow Us</span>
+          <a href="https://www.instagram.com/tomlee_wdco/"><div class="socialMedia-link"><img src="pages/home/images/instagramIcon.webp"><span>Instagram</span></div></a>
+          <a href="https://www.facebook.com/wdchk"><div class="socialMedia-link"><img src="pages/home/images/faceBookIcon.webp"><span>Facebook</span></div></a>
+          <a href="https://www.linkedin.com/company/wealth-dimensions-consultancy-limited/posts/?feedView=all"><div class="socialMedia-link"><img src="pages/home/images/LinkedInIcon.webp"><span>LinkedIn</span></div></a>
+        </div>
+        <div class="contact-container">
+          <span class="bold">Contact</span>
+          <span class="contact-info gmail">info@wdco.com.hk</span></a>
+          <span class="contact-info">+852 3571 9903</span>
+        </div>
+      </div>
+      <img class="wdc-logo-1" src="pages/home/images/WdcLogo.webp">
+      <div class="footer-row">
+        <div class="agency-info-container">
+          <span class="agency-info">Employment Agency Licence Number :<span>72014</span></span>
+          <span class="agency-info">Labour Department Employment Agency :<span><a href="https://www.eaa.labour.gov.hk">www.eaa.labour.gov.hk</a></span></span>
+        </div>
+        <img class="wdc-logo-1" src="pages/home/images/WdcLogo.webp">
+      </div>
+      <div class="policies">
+        <span class="copyright">©2015-2024 by Wealth Dimensions Consultancy Limited</span>
+        <div class="padding-container">
+          <span>Terms and Conditions</span>
+          <a href="pages/privacyPolicy/privacyPolicy.html">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- End of footer -->
+  <script src="pages/search.js"></script>
+  <script src="pages/home/javascripts/hotJobs.js"></script>
+</body>
+</html>
