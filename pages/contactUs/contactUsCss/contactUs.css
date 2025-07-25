@@ -52,7 +52,7 @@ input[type=text], select, textarea {
 
 #user-name{
   background-color: white;
-  background-image: url('../contactUsImg/nameImg.webp');
+  background-image: url('/wdco-website/pages/contactUs/contactUsImg/nameImg.webp');
   background-position: 17px 8px; 
   background-size: 25px 25px;
   background-repeat: no-repeat;
