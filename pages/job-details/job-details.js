@@ -154,7 +154,7 @@ function updateMetaTags(job) {
         'og:title': job.jobTitle,
         'og:description': `Company: ${job.company} | Location: ${job.location} | Salary: ${job.salary}`,
         'og:url': window.location.href,
-        'og:image': new URL('/pages/home/images/WdcLogo.webp', window.location.href).href,
+        'og:image': new URL('/wdco-website/pages/home/images/WdcLogo.webp', window.location.href).href,
         'og:type': 'website'
     };
 
