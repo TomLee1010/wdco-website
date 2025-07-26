@@ -181,3 +181,12 @@ form{
   }
 }
 
+@media(max-width: 500px){
+  .outer-div{
+    width: 90%;
+  }
+  form{
+  width: 85%;
+  }
+}
+
