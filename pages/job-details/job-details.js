@@ -1,22 +1,26 @@
 document.addEventListener('DOMContentLoaded', () => {
   const urlParams = new URLSearchParams(window.location.search);
-  const jobId = urlParams.get('jobId');
+  let jobId = urlParams.get('jobId');
 
   if (jobId) {
-    // If a jobId is present in the URL, fetch the specific job
     loadJobFromUrl(jobId);
   } else {
-    // Fallback to sessionStorage for direct navigation from the jobs list
     try {
       const selectedJobJSON = sessionStorage.getItem('selectedJob');
       if (selectedJobJSON) {
         const selectedJob = JSON.parse(selectedJobJSON);
+        jobId = selectedJob.id;
+        
+        // Add the job ID to the URL without reloading the page
+        const newUrl = `${window.location.pathname}?jobId=${jobId}`;
+        history.replaceState(null, '', newUrl);
+        
         populateJobDetails(selectedJob);
       } else {
         displayError('No job data found. Please select a job from the list.');
       }
     } catch (error) {
-      displayError('An error occurred while loading job details from session storage.');
+      displayError('An error occurred while loading job details.');
       console.error(error);
     }
   }
@@ -65,6 +69,9 @@ function populateJobDetails(job) {
     displayError('Invalid job data provided.');
     return;
   }
+
+  updateMetaTags(job);
+  document.title = `${job.jobTitle} | WDC`;
 
   const setText = (id, text) => {
     const element = document.getElementById(id);
@@ -116,6 +123,47 @@ function populateJobDetails(job) {
       window.location.href = url;
     };
   }
+
+  const shareButton = document.querySelector(".share-btn");
+  if (shareButton) {
+    shareButton.addEventListener("click", (event) => {
+      const url = window.location.href;
+      const title = job.jobTitle;
+      const shareText = `Check out this job: ${job.jobTitle}\nCompany: ${job.company}\nLocation: ${job.location}`;
+
+      if (navigator.share) {
+        navigator.share({
+          title: title,
+          text: shareText,
+          url: url,
+        })
+        .then(() => console.log('Successful share'))
+        .catch((error) => console.log('Error sharing', error));
+      } else {
+        navigator.clipboard.writeText(`${shareText}\n${url}`);
+        alert("Job details and link copied to clipboard!");
+      }
+    });
+  }
+}
+
+function updateMetaTags(job) {
+    document.querySelectorAll('meta[property^="og:"]').forEach(tag => tag.remove());
+
+    const metaInfo = {
+        'og:title': job.jobTitle,
+        'og:description': `Company: ${job.company} | Location: ${job.location} | Salary: ${job.salary}`,
+        'og:url': window.location.href,
+        'og:image': new URL('/pages/home/images/WdcLogo.webp', window.location.href).href,
+        'og:type': 'website'
+    };
+
+    for (const property in metaInfo) {
+        const metaTag = document.createElement('meta');
+        metaTag.setAttribute('property', property);
+        metaTag.setAttribute('content', metaInfo[property]);
+        document.head.appendChild(metaTag);
+    }
 }
 
 function displayError(message) {
@@ -125,3 +173,4 @@ function displayError(message) {
     container.innerHTML = `<h1>${message}</h1>`;
   }
 }
+
