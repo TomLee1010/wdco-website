@@ -466,7 +466,7 @@ function sortMethod(start, end, jobList, numberOfPages, decimalPart){
 
 var jobList = [];
 
-fetch("/wdco-website/data/jobs.json")
+fetch("/data/jobs.json")
   .then(response => response.json())
   .then(data => {
     console.log(data);
