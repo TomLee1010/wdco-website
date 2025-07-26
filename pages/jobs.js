@@ -1,5 +1,6 @@
 class Job {
-  constructor(company, jobTitle, level, salary, workHours, location, classification, date, responsibilities, requirements, highlightsDuties, highlightsRequirements) {
+  constructor(id, company, jobTitle, level, salary, workHours, location, classification, date, responsibilities, requirements, highlightsDuties, highlightsRequirements) {
+    this.id = id;
     this.company = company;
     this.jobTitle = jobTitle;
     this.level = level;
@@ -239,22 +240,9 @@ function createJobItems(start, end, jobList){
             newTabButton.dataset.index = index;
 
             const shareButton = document.querySelector(".share-btn");
-            shareButton.addEventListener("click", (event) => {
-                const url = window.location.href;
-                
-                if (navigator.share) {
-                    navigator.share({
-                        title: job.jobTitle,
-                        text: `Check out this job: ${job.jobTitle}`,
-                        url: url,
-                    })
-                    .then(() => console.log('Successful share'))
-                    .catch((error) => console.log('Error sharing', error));
-                } else {
-                    navigator.clipboard.writeText(url);
-                    alert("Job link copied to clipboard!");
-                }
-            });
+            const jobUrl = new URL(`../job-details/job-details.html?jobId=${job.id}`, window.location.href).href;
+            shareButton.dataset.url = jobUrl;
+            shareButton.dataset.title = job.jobTitle;
 
             // Dynamically changes job details
             document.getElementById("item-company-name").innerHTML = job.company;
@@ -498,7 +486,7 @@ fetch("/wdco-website/data/jobs.json")
       const highlightsDuties = data["jobs"]["hotJobs"][i]["highLights"]["responsibilities"];
       const highlightsRequirements = data["jobs"]["hotJobs"][i]["highLights"]["requirements"];
 
-      const hotJob = new Job(company, jobTitle, level, salary, workHours, location, classification, date, responsibilities, requirements, highlightsDuties, highlightsRequirements);
+      const hotJob = new Job(`hotJobs-${i}`, company, jobTitle, level, salary, workHours, location, classification, date, responsibilities, requirements, highlightsDuties, highlightsRequirements);
       jobList.push(hotJob);
     }
     for (i=0; i < regularJobsKeyCount; i++){
@@ -515,7 +503,7 @@ fetch("/wdco-website/data/jobs.json")
       const highlightsDuties = data["jobs"]["regularJobs"][i]["highLights"]["responsibilities"];
       const highlightsRequirements = data["jobs"]["regularJobs"][i]["highLights"]["requirements"];
 
-      const job = new Job(company, jobTitle, level, salary, workHours, location, classification, date, responsibilities, requirements, highlightsDuties, highlightsRequirements);
+      const job = new Job(`regularJobs-${i}`, company, jobTitle, level, salary, workHours, location, classification, date, responsibilities, requirements, highlightsDuties, highlightsRequirements);
       jobList.push(job);
     }
 
@@ -583,11 +571,49 @@ fetch("/wdco-website/data/jobs.json")
         emptyJobDetails.style.display = "flex";
       }
     });
+
+    const shareButton = document.querySelector(".share-btn");
+    if (shareButton) {
+      shareButton.addEventListener("click", (event) => {
+        const url = event.currentTarget.dataset.url;
+        const title = event.currentTarget.dataset.title;
+
+        if (!url) {
+          alert("Please select a job to share first.");
+          return;
+        }
+
+        if (navigator.share) {
+          navigator.share({
+            title: title,
+            text: `Check out this job: ${title}`,
+            url: url,
+          })
+          .then(() => console.log('Successful share'))
+          .catch((error) => console.log('Error sharing', error));
+        } else {
+          navigator.clipboard.writeText(url);
+          alert("Job link copied to clipboard!");
+        }
+      });
+    }
   }) 
   
   .catch(error => {
     console.error("Error fetching JSON:", error);
   });
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
