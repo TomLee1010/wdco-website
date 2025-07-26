@@ -15,111 +15,98 @@ class Job {
   }
 }
 
-window.addEventListener('pagehide', function() {
-  if (localStorage.getItem('UserInput') != null){
-    localStorage.setItem('UserInput', "");
-  }
-  if (localStorage.getItem('SelectedLevel') != null){
-    localStorage.setItem('SelectedLevel', "All Levels");
-  }
-  if (localStorage.getItem('FromAmount') != null){
-    localStorage.setItem('FromAmount', "$0");
-  }
-  if (localStorage.getItem('ToAmount') != null){
-    localStorage.setItem('ToAmount', "$100k");
-  }
-});
 
-function bubbleSort(arr, arr2) {
-  let n = arr.length;
-  for (let i = 0; i < n-1; i++)
-    for (let j = 0; j < n-i-1; j++)
-      if (arr[j] > arr[j+1]) {
-        let temp = arr[j];
-        let temp2 = arr2[j];
-        arr[j] = arr[j+1];
-        arr2[j] = arr2[j+1];
-        arr[j+1] = temp;
-        arr2[j+1] = temp2;
-      }
-}
+
+
 
 function sortByDate(jobList){
-  var jobDayDiff = [];
-  var presentDate = new Date();
-    for (i=0; i < jobList.length; i++){
-      var jobDate = jobList[i].date;
-      var dateObject = new Date(jobDate)
-      var differenceInTime = presentDate.getTime() - dateObject.getTime();
-      var differenceInDays = Math.round(differenceInTime / (1000 * 3600 * 24));
-      jobDayDiff.push(differenceInDays);
-    }
-  bubbleSort(jobDayDiff, jobList);
+  jobList.sort((a, b) => new Date(b.date) - new Date(a.date));
 }
 
-function sortByRelevance(jobList){
-  var searchBar = document.getElementById("search-input");
-  var searchResult = document.getElementById("search-results");
-  var searchResultSpan = document.getElementById("search-result-container");
-  var numOfMatch = [];
-  var matchItems = [];
-  var count = 0;
-  var match = 0;
-  if (searchBar.value != ""){
-    for (i=0; i < jobList.length; i++){
-      const searchList = searchBar.value.split(" ");
-      for (j=0; j < searchList.length; j++){
-        if (jobList[i].jobTitle.toLowerCase().includes(searchList[j].toLowerCase())){
-          count -= 1;
-        }
-      }
-      if (count < 0){
-        if (document.getElementById("select-level").value == jobList[i].level){
-          count -= 10;
-        } else {
-          count = 0;
-        }
-        var jobSalaryString = jobList[i].salary;
-        var jobSalaryArray = jobSalaryString.split("-");
-        var fromAmountString = document.getElementById("from-amount").value;
-        var fromAmountPart = fromAmountString.split("$")[1];
-        var fromAmountNum = Number(fromAmountPart.split("k")[0]);
+function sortByRelevance(jobList) {
+  const searchBar = document.getElementById("search-input");
+  const searchResult = document.getElementById("search-results");
+  const searchResultSpan = document.getElementById("search-result-container");
+  const searchTerm = searchBar.value.toLowerCase();
+  const searchWords = searchTerm.split(" ").filter(w => w); // Filter out empty strings
 
-        var toAmountString = document.getElementById("to-amount").value;
-        var toAmountPart = toAmountString.split("$")[1];
-        var toAmountNum = Number(toAmountPart.split("k")[0]);
+  const selectedLevel = document.getElementById("select-level").value;
 
-        if (jobSalaryArray == 2){
-          var fromSalary = Number(jobSalaryArray[0]);
-          var toSalary = Number(jobSalaryArray[1]);
-          if (fromSalary >=  fromAmountNum && toSalary <= toAmountNum){
-            count -= 10;
-          } else {
-            count = 0;
-          }
-        } else {
-          var jobSalary = Number(jobSalaryArray[0]);
-          if (jobSalary >=  fromAmountNum && jobSalary <= toAmountNum){
-            count -= 10;
-          } else {
-            count = 0;
-          }
-        } 
-      }
-      numOfMatch.push(count);
-      if (count != 0){
-        match += 1;
-        matchItems.push(jobList[i]);
-      }
-      count = 0;
+  const fromAmountString = document.getElementById("from-amount").value;
+  const fromAmountPart = fromAmountString.split("$")[1];
+  const fromAmountNum = Number(fromAmountPart.split("k")[0]);
+
+  const toAmountString = document.getElementById("to-amount").value;
+  const toAmountPart = toAmountString.split("$")[1];
+  const toAmountNum = Number(toAmountPart.split("k")[0]);
+
+  const filteredJobs = jobList.filter(job => {
+    // Level filter
+    if (selectedLevel !== "All Levels" && job.level !== selectedLevel) {
+      return false;
     }
-    bubbleSort(numOfMatch, jobList);
-    searchResult.innerHTML = match;
-    searchResultSpan.style.opacity = 100; // Make the job result visible
-  } else {
-    searchResultSpan.style.opacity = 0; // Make the job result invisible
+
+    // Salary filter
+    const salaryString = job.salary.replace(/k/g, '');
+    const salaryParts = salaryString.split('-').map(s => parseInt(s.trim(), 10));
+    const jobMinSalary = salaryParts[0];
+    const jobMaxSalary = salaryParts.length > 1 ? salaryParts[1] : jobMinSalary;
+
+    if (!isNaN(jobMinSalary) && !isNaN(fromAmountNum) && !isNaN(toAmountNum)) {
+      if (jobMaxSalary < fromAmountNum || jobMinSalary > toAmountNum) {
+        return false;
+      }
+    }
+
+    // Keyword filter
+    if (searchTerm) {
+        const jobTitle = job.jobTitle.toLowerCase();
+        const company = job.company.toLowerCase();
+        const classification = job.classification.toLowerCase();
+        
+        // Return true if at least one search word is found in the relevant fields
+        return searchWords.some(word => 
+            jobTitle.includes(word) || 
+            company.includes(word) || 
+            classification.includes(word)
+        );
+    }
+
+    return true; // Keep job if it passes all filters and there's no keyword search
+  });
+
+  // Sort by relevance (score) only if there was a search term
+  if (searchTerm) {
+    filteredJobs.sort((a, b) => {
+      let scoreA = 0;
+      let scoreB = 0;
+
+      const jobTitleA = a.jobTitle.toLowerCase();
+      const jobTitleB = b.jobTitle.toLowerCase();
+      const companyA = a.company.toLowerCase();
+      const companyB = b.company.toLowerCase();
+
+      searchWords.forEach(word => {
+          // Higher score for title matches
+          if (jobTitleA.includes(word)) scoreA += 2;
+          if (jobTitleB.includes(word)) scoreB += 2;
+          // Lower score for company matches
+          if (companyA.includes(word)) scoreA += 1;
+          if (companyB.includes(word)) scoreB += 1;
+      });
+      
+      return scoreB - scoreA; // Higher score first
+    });
   }
-  return [match, matchItems];
+
+  searchResult.innerHTML = filteredJobs.length;
+  if (searchBar.value) {
+    searchResultSpan.style.opacity = 100;
+  } else {
+    searchResultSpan.style.opacity = 0;
+  }
+
+  return filteredJobs;
 }
 
 
@@ -447,59 +434,46 @@ function sortMethod(start, end, jobList, numberOfPages, decimalPart){
   var searchBar = document.getElementById("search-input");
   var jobsOuterContainer = document.getElementById("jobs-outer-div");
   var notFoundContainer = document.getElementById("not-found-container");
-  var matchedResult = [];
-  if (select.value == "sort by relevance"){
-    matchedResult = sortByRelevance(jobList);
-    var resultPages = Number(matchedResult[0]/10);
-    if (Number.isInteger(resultPages) == false){ // Check if numberOfPages is a decimal value
-      const integerPart = Math.floor(resultPages);
-      const decimalArray = resultPages.toString().split('.');
-      decimalPart = Number(decimalArray[1]);
-      isdecimal = true;
-      resultPages = integerPart + 1;
-    }
-    if (matchedResult[0] != 0){
-      if (jobsOuterContainer.style.display == "none"){
-        const notFoundDiv = document.getElementById("not-found-container");
-        notFoundDiv.style.display = "none";
-        jobsOuterContainer.style.display = "flex";
-      }
-      if (matchedResult[0] < 10){
-        createJobItems(start, matchedResult[0], jobList);
-      } else {
-        createJobItems(start, end, jobList);
-      };
-      pagesBtns(start, end, jobList, resultPages, decimalPart);
-    } else if (matchedResult[0] == 0 && searchBar.value != ""){
-        jobsOuterContainer.style.display = "none";
-        notFoundContainer.style.display = "flex";
-        notFoundPage();
-    };
 
-  } else {
-    if (searchBar.value != "" && matchedResult[0] != 0){
-      matchedResult = sortByRelevance(jobList);
-      var resultPages = Number(matchedResult[0]/10);
-      if (Number.isInteger(resultPages) == false){ // Check if numberOfPages is a decimal value
-        const integerPart = Math.floor(resultPages);
-        const decimalArray = resultPages.toString().split('.');
-        decimalPart = Number(decimalArray[1]);
-        isdecimal = true;
-        resultPages = integerPart + 1;
-      };
-      sortByDate(matchedResult[1]);
-      if (matchedResult[0] < 10){
-        createJobItems(start, matchedResult[0], matchedResult[1]);
-      } else {
-        createJobItems(start, end, matchedResult[1]);
-      };
-      pagesBtns(start, end, jobList, resultPages, decimalPart);
-    } else {
-      sortByDate(jobList);
-      createJobItems(start, end, jobList);
-      pagesBtns(start, end, jobList, numberOfPages, decimalPart);
-    }
+  // 1. Get filtered and relevance-sorted jobs
+  let filteredJobs = sortByRelevance(jobList);
+
+  // 2. If user selected "sort by date", re-sort the filtered list
+  if (select.value == "sort by date"){
+    sortByDate(filteredJobs);
   }
+
+  // 3. Handle "not found" case
+  if (filteredJobs.length === 0 && searchBar.value !== "") {
+      jobsOuterContainer.style.display = "none";
+      notFoundContainer.style.display = "flex";
+      notFoundPage();
+      // Clear pagination if no results
+      var btnElement = document.getElementById("pages-controls"); 
+      while (btnElement.firstChild) { 
+        btnElement.firstChild.remove(); 
+      }
+      return; // Stop further execution
+  }
+  
+  // Ensure main view is visible if there are results
+  jobsOuterContainer.style.display = "flex";
+  notFoundContainer.style.display = "none";
+
+  // 4. Calculate pagination for the filtered list
+  var resultPages = Math.ceil(filteredJobs.length / 10);
+  var newDecimalPart = filteredJobs.length % 10;
+  if (newDecimalPart === 0 && filteredJobs.length > 0) {
+    newDecimalPart = 10;
+  }
+
+
+  // 5. Display the first page of results
+  const displayEnd = Math.min(end, filteredJobs.length);
+  createJobItems(start, displayEnd, filteredJobs);
+
+  // 6. Set up pagination controls
+  pagesBtns(start, end, filteredJobs, resultPages, newDecimalPart);
 }
 
 var jobList = [];
@@ -543,6 +517,13 @@ fetch("/wdco-website/data/jobs.json")
 
       const job = new Job(company, jobTitle, level, salary, workHours, location, classification, date, responsibilities, requirements, highlightsDuties, highlightsRequirements);
       jobList.push(job);
+    }
+
+    const searchInput = document.getElementById('search-input');
+    const initialSearchTerm = localStorage.getItem('userSearch');
+    if (initialSearchTerm) {
+      searchInput.value = initialSearchTerm;
+      localStorage.removeItem('userSearch'); // Clear after use
     }
 
     var start = 0;
@@ -607,8 +588,6 @@ fetch("/wdco-website/data/jobs.json")
   .catch(error => {
     console.error("Error fetching JSON:", error);
   });
-
-
 
 
 
