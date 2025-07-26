@@ -17,7 +17,7 @@ class Job {
 
 var jobList = [];
 
-fetch("/data/jobs.json")
+fetch("/wdco-website/data/jobs.json")
   .then(response => response.json())
   .then(data => {
     const hotJobs = data.jobs.hotJobs;
