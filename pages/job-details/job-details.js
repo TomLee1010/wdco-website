@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function loadJobFromUrl(jobId) {
-  fetch('../../data/jobs.json') // Use relative path for GitHub Pages
+  fetch('/wdco-website/data/jobs.json') // Use relative path for GitHub Pages
     .then(res => {
       if (!res.ok) throw new Error("Failed to fetch jobs.json");
       return res.json();
