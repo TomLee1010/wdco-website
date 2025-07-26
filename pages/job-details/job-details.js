@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function loadJobFromUrl(jobId) {
-  fetch('/data/jobs.json') // Use absolute path from root
+  fetch('/wdco-website/data/jobs.json') // Use absolute path from root
     .then(res => {
       if (!res.ok) throw new Error("Failed to fetch jobs.json");
       return res.json();
