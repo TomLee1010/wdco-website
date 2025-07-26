@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function loadJobFromUrl(jobId) {
   // Construct a path relative to the current HTML page's location
-  const jobsPath = new URL('/wdco-website/data/jobs.json', window.location.href).href;
+  const jobsPath = new URL('/data/jobs.json', window.location.href).href;
   fetch(jobsPath)
     .then(res => {
       if (!res.ok) throw new Error(`Failed to fetch jobs.json at ${jobsPath}`);
@@ -154,7 +154,7 @@ function updateMetaTags(job) {
         'og:title': job.jobTitle,
         'og:description': `Company: ${job.company} | Location: ${job.location} | Salary: ${job.salary}`,
         'og:url': window.location.href,
-        'og:image': new URL('/wdco-website/pages/home/images/WdcLogo.webp', window.location.href).href,
+        'og:image': new URL('/pages/home/images/WdcLogo.webp', window.location.href).href,
         'og:type': 'website'
     };
 
