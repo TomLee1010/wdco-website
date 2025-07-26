@@ -1,42 +1,62 @@
 document.addEventListener('DOMContentLoaded', () => {
-  try {
-    const selectedJobJSON = sessionStorage.getItem('selectedJob');
+  const urlParams = new URLSearchParams(window.location.search);
+  const jobId = urlParams.get('jobId');
 
-    if (selectedJobJSON) {
-      const selectedJob = JSON.parse(selectedJobJSON);
-      populateJobDetails(selectedJob);
-    } else {
-      // Fallback: try to get job index from URL
-      const urlParams = new URLSearchParams(window.location.search);
-      const jobIndex = parseInt(urlParams.get('job'));
-
-      if (!isNaN(jobIndex)) {
-        fetch('../../jobs.json') // adjust path if needed
-          .then(res => {
-            if (!res.ok) throw new Error("Failed to fetch jobs.json");
-            return res.json();
-          })
-          .then(jobs => {
-            const job = jobs[jobIndex];
-            if (job) {
-              populateJobDetails(job);
-            } else {
-              displayError(`No job found at index ${jobIndex}.`);
-            }
-          })
-          .catch(err => {
-            displayError('Error loading job data from jobs.json.');
-            console.error(err);
-          });
+  if (jobId) {
+    // If a jobId is present in the URL, fetch the specific job
+    loadJobFromUrl(jobId);
+  } else {
+    // Fallback to sessionStorage for direct navigation from the jobs list
+    try {
+      const selectedJobJSON = sessionStorage.getItem('selectedJob');
+      if (selectedJobJSON) {
+        const selectedJob = JSON.parse(selectedJobJSON);
+        populateJobDetails(selectedJob);
       } else {
-        displayError('No job data found in session storage or URL.');
+        displayError('No job data found. Please select a job from the list.');
       }
+    } catch (error) {
+      displayError('An error occurred while loading job details from session storage.');
+      console.error(error);
     }
-  } catch (error) {
-    displayError('An error occurred while loading job details.');
-    console.error(error);
   }
 });
+
+function loadJobFromUrl(jobId) {
+  fetch('/data/jobs.json') // Use absolute path from root
+    .then(res => {
+      if (!res.ok) throw new Error("Failed to fetch jobs.json");
+      return res.json();
+    })
+    .then(data => {
+      const [category, index] = jobId.split('-');
+      
+      if (data.jobs && data.jobs[category] && data.jobs[category][index]) {
+        const jobData = data.jobs[category][index];
+        // Re-construct a Job object to include all necessary details
+        const job = {
+            id: jobId,
+            company: jobData.details.company,
+            jobTitle: jobData.details.jobTitle,
+            level: jobData.details.level,
+            salary: jobData.details.salary,
+            workHours: jobData.details.workHours,
+            location: jobData.details.location,
+            classification: jobData.details.classification,
+            date: jobData.details.date,
+            responsibilities: jobData.details.responsibilities,
+            requirements: jobData.details.requirements
+        };
+        populateJobDetails(job);
+      } else {
+        displayError(`Job with ID "${jobId}" not found.`);
+      }
+    })
+    .catch(err => {
+      displayError('Error loading job data.');
+      console.error(err);
+    });
+}
 
 function populateJobDetails(job) {
   if (!job) {
