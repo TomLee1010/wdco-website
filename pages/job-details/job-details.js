@@ -148,11 +148,22 @@ function populateJobDetails(job) {
 }
 
 function updateMetaTags(job) {
+    // Remove old meta tags to prevent duplicates
+    document.querySelectorAll('meta[name="description"]').forEach(tag => tag.remove());
     document.querySelectorAll('meta[property^="og:"]').forEach(tag => tag.remove());
 
+    const descriptionContent = `Apply for the role of ${job.jobTitle} at ${job.company}. Location: ${job.location}. Salary: ${job.salary}.`;
+
+    // Standard Meta Description
+    const metaDesc = document.createElement('meta');
+    metaDesc.name = 'description';
+    metaDesc.content = descriptionContent;
+    document.head.appendChild(metaDesc);
+
+    // Open Graph (og) Meta Tags for social sharing
     const metaInfo = {
         'og:title': job.jobTitle,
-        'og:description': `Company: ${job.company} | Location: ${job.location} | Salary: ${job.salary}`,
+        'og:description': descriptionContent,
         'og:url': window.location.href,
         'og:image': new URL('/pages/home/images/WdcLogo.webp', window.location.href).href,
         'og:type': 'website'
