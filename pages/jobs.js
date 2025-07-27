@@ -16,6 +16,10 @@ class Job {
   }
 }
 
+
+
+
+
 function sortByDate(jobList){
   jobList.sort((a, b) => new Date(b.date) - new Date(a.date));
 }
@@ -234,6 +238,14 @@ function createJobItems(start, end, jobList){
             
             const newTabButton = document.querySelector(".new-tab");
             newTabButton.dataset.index = index;
+            newTabButton.onclick = function() {
+                const index = this.dataset.index;
+                if (index !== undefined) {
+                    const job = jobList[parseInt(index)];
+                    sessionStorage.setItem('selectedJob', JSON.stringify(job));
+                    window.open(`../job-details/job-details.html`, '_blank');
+                }
+            };
 
             const shareButton = document.querySelector(".share-btn");
             const jobUrl = new URL(`../job-details/job-details.html?jobId=${job.id}`, window.location.href).href;
@@ -262,18 +274,6 @@ function createJobItems(start, end, jobList){
         }
       })
     }
-    document.querySelector(".new-tab").addEventListener("click", function(event) {
-    event.preventDefault();
-    const index = this.dataset.index;
-
-    if (index !== undefined) {
-      const job = jobList[parseInt(index)];
-      sessionStorage.setItem('selectedJob', JSON.stringify(job)); // ✅ Add this
-      window.open(`../job-details/job-details.html`, '_blank'); // ✅ No query param needed
-    } else {
-      console.warn("No index set on new-tab button.");
-    }
-    });
   }
 }
 
@@ -598,7 +598,6 @@ fetch("/data/jobs.json")
   .catch(error => {
     console.error("Error fetching JSON:", error);
   });
-
 
 
 
