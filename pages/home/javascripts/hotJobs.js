@@ -117,6 +117,3 @@ fetch("/data/jobs.json")
   .catch(error => {
     console.error("Error fetching JSON:", error);
   });
-
-  var searchInput = document.getElementById('search-input'); 
-  searchInput.value = "";
