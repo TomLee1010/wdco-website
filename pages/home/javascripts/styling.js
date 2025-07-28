@@ -1,19 +1,3 @@
-/*
-// Start of sorting buttons' javascript
-
-var sort_btns = document.getElementsByClassName("sorting-btn");
-
-// Add a click event listener to each element
-for (var i = 0; i < sort_btns.length; i++) {
-    sort_btns[i].addEventListener("click", function() {
-        // Toggle the "sort_active" class
-        this.classList.toggle("sort_active");
-    });
-}
-*/
-
-// End of sorting buttons' javascript
-
 // Start of navigation links 
 
 var navLinks = document.querySelectorAll(".links a")
@@ -31,46 +15,9 @@ navLinks.forEach(link => {
 
 const menuArrow = document.getElementById("menu-arrow");
 const dropdownMenu = document.getElementById("dropdown-menu");
-let rotation = 0;
-let scrollY = 0;
 
 function menuArrowRotation() {
-  if (rotation === 0) {
-    rotation = -180;
-    menuArrow.style.transform = `rotate(${rotation}deg)`;
-    dropdownMenu.style.marginTop = "0";
-
-    // Lock scroll without jump
-    scrollY = window.scrollY;
-    document.body.style.position = "fixed";
-    document.body.style.top = `-${scrollY}px`;
-    document.body.style.left = "0";
-    document.body.style.right = "0";
-    document.body.style.width = "100%";
-    document.body.classList.add("menu-open");
-
-    // ✅ Move menu out of scroll context
-    dropdownMenu.style.position = "absolute";
-    const navbarHeight = document.querySelector("header .navbar").offsetHeight;
-    dropdownMenu.style.top = `${scrollY + navbarHeight}px`;
-  } else {
-    rotation = 0;
-    menuArrow.style.transform = `rotate(${rotation}deg)`;
-    dropdownMenu.style.marginTop = "-1000px";
-
-    // Restore scroll
-    document.body.style.position = "";
-    document.body.style.top = "";
-    document.body.style.left = "";
-    document.body.style.right = "";
-    document.body.style.width = "";
-    document.body.classList.remove("menu-open");
-    window.scrollTo(0, scrollY);
-
-    // Reset menu position
-    dropdownMenu.style.position = "";
-    dropdownMenu.style.top = "";
-  }
+  document.body.classList.toggle('menu-open');
 }
 
 // Active link toggle
