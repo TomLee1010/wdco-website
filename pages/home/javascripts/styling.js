@@ -15,8 +15,15 @@ navLinks.forEach(link => {
 
 const menuArrow = document.getElementById("menu-arrow");
 const dropdownMenu = document.getElementById("dropdown-menu");
+let rotation = 0;
 
 function menuArrowRotation() {
+  if (rotation === 0) {
+    rotation = -180;
+  } else {
+    rotation = 0;
+  }
+  menuArrow.style.transform = `rotate(${rotation}deg)`;
   document.body.classList.toggle('menu-open');
 }
 
