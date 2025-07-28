@@ -98,39 +98,46 @@
     </div>
     <div class="more-options-container">
         <div class="search-options-menu">
-          <select class="sorting-btn" id="select-level">
-            <option>All Levels</option>
-            <option>Easy</option>
-            <option>Regular</option>
-            <option>High Level</option>
-          </select>
-          <label>from HKD (Monthly):</label>
-          <select class="sorting-btn" id="from-amount">
-            <option>$0</option>
-            <option>$10k</option>
-            <option>$20k</option>
-            <option>$30k</option>
-            <option>$40k</option>
-            <option>$50k</option>
-            <option>$60k</option>
-            <option>$70k</option>
-            <option>$80k</option>
-            <option>$90k</option>
-            <option>$100k</option>
-          </select>
-          <label>to HKD (Monthly):</label>
-          <select class="sorting-btn" id="to-amount">
-            <option>$10k</option>
-            <option>$20k</option>
-            <option>$30k</option>
-            <option>$40k</option>
-            <option>$50k</option>
-            <option>$60k</option>
-            <option>$70k</option>
-            <option>$80k</option>
-            <option>$90k</option>
-            <option selected>$100k</option>
-          </select>  
+          <div class="level-select-container">
+            <label for="select-level">Job Level</label>
+            <select class="sorting-btn" id="select-level">
+              <option>All Levels</option>
+              <option>Easy</option>
+              <option>Regular</option>
+              <option>High Level</option>
+            </select>
+          </div>
+          <div class="salary-range-container">
+            <label for="from-amount">Salary Range (HKD Monthly)</label>
+            <div class="salary-inputs">
+              <select class="sorting-btn" id="from-amount">
+                <option>$0</option>
+                <option>$10k</option>
+                <option>$20k</option>
+                <option>$30k</option>
+                <option>$40k</option>
+                <option>$50k</option>
+                <option>$60k</option>
+                <option>$70k</option>
+                <option>$80k</option>
+                <option>$90k</option>
+                <option>$100k</option>
+              </select>
+              <span>-</span>
+              <select class="sorting-btn" id="to-amount">
+                <option>$10k</option>
+                <option>$20k</option>
+                <option>$30k</option>
+                <option>$40k</option>
+                <option>$50k</option>
+                <option>$60k</option>
+                <option>$70k</option>
+                <option>$80k</option>
+                <option>$90k</option>
+                <option selected>$100k</option>
+              </select>
+            </div>
+          </div>
         </div>
     </div>
     <!-- End of search bar -->
