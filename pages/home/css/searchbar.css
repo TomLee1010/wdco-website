@@ -164,18 +164,41 @@ header .more-options-container{
 header .more-options-container .search-options-menu{
   display: flex;
   align-items: center;
-  height: 100px;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: auto;
   width: 70%;
   background-color: white;
   box-shadow: rgba(99, 99, 99, 0.5) 0px 2px 8px 0px;
   position: absolute;
   border-radius: 20px;
   min-width: 200px;
-  max-width: 750px;
-  gap: 20px;
-  padding: 30px;
+  max-width: 770px;
+  gap: 15px;
+  padding: 20px;
   padding-top: 45px;
-  padding-bottom: 25px;
+}
+
+.level-select-container,
+.salary-range-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.salary-inputs {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+header .more-options-container .search-options-menu > * {
+    flex-shrink: 0;
+}
+
+header .more-options-container .search-options-menu label {
+    margin-bottom: 5px;
 }
 
 header .more-options-container .search-options-menu .sorting-btn{
