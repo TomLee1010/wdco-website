@@ -1,3 +1,10 @@
+/* Start of navigation bar */
+/*
+*{
+  outline: 1px solid red;
+}
+*/
+
 header .outer-navbar {
   display: flex;
   justify-content: center;
@@ -7,7 +14,7 @@ header .outer-navbar {
   position: fixed;
   top: 0;
   box-shadow: 5px -5px 8px 8px rgba(0, 0, 0, 0.05);
-  z-index: 100;
+  z-index: 1000;
   transition: top 0.3s;
 }
 
@@ -212,29 +219,41 @@ header .menu-container ul .active a{
   color: black;
 }
 
-header .menu-container .language-container{
-  display: flex;
-  width: 100%;
-  height: 100px;
-  margin-top: 20px;
-  border-top: solid 3px rgba(70, 70, 70, 0.1);
-}
-
-header .language-container .language{
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  width:30px;
-  padding-left: 40px;
-  font-size: 1.1rem;
-  cursor: pointer;
-}
-
 header .language-container .language img{
   width: 20px;
   height: 20px;
   object-fit: cover;
 }
+
+header .links .language-container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+header .links .language-container .language {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 1rem;
+  color: rgb(117, 117, 117);
+  white-space: nowrap;
+}
+
+header .links .language-container .language .lang-text {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 1rem;
+  color: rgb(117, 117, 117);
+  white-space: nowrap;
+  margin-bottom: 1px;
+}
+
+header .links .language-container:hover .language .lang-text {
+  color: rgb(87, 87, 87);
+}
+
 
 /* End of menu */
 
