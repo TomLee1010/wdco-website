@@ -254,6 +254,28 @@ header .links .language-container:hover .language .lang-text {
   color: rgb(87, 87, 87);
 }
 
+header .menu-container .language-container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding-left: 43px;
+  margin-top: 20px;
+  padding-bottom: 40px;
+}
+
+header .menu-container .language-container .language {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 1.1rem;
+  color: rgb(130, 130, 130);
+}
+
+header .menu-container .language-container:hover .language {
+  color: rgb(82, 82, 82);
+}
+
+
 
 /* End of menu */
 
