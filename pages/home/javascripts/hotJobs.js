@@ -1,23 +1,20 @@
 class Job {
-  constructor(company, jobTitle, level, salary, workHours, location, classification, date, responsibilities, requirements, highlightsDuties, highlightsRequirements) {
+  constructor(company, jobTitle, salary, classification, date, responsibilities, requirements, highlights, location) {
     this.company = company;
     this.jobTitle = jobTitle;
-    this.level = level;
     this.salary = salary;
-    this.workHours = workHours;
-    this.location = location;
     this.classification = classification;
     this.date = date;
     this.responsibilities = responsibilities;
     this.requirements = requirements;
-    this.highlightsDuties = highlightsDuties;
-    this.highlightsRequirements = highlightsRequirements;
+    this.highlights = highlights;
+    this.location = location;
   }
 }
 
 var jobList = [];
 
-fetch("/data/jobs.json")
+fetch("../../../data/jobs.json")
   .then(response => response.json())
   .then(data => {
     const hotJobs = data.jobs.hotJobs;
@@ -29,16 +26,13 @@ fetch("/data/jobs.json")
       const job = new Job(
         jobDetails.company,
         jobDetails.jobTitle,
-        jobDetails.level,
         jobDetails.salary,
-        jobDetails.workHours,
-        jobDetails.location,
         jobDetails.classification,
         jobDetails.date,
         jobDetails.responsibilities,
         jobDetails.requirements,
-        jobHighlights.responsibilities,
-        jobHighlights.requirements
+        jobHighlights,
+        jobDetails.location
       );
       jobList.push(job);
     }
@@ -77,12 +71,6 @@ fetch("/data/jobs.json")
       const salaryInnerSpan = document.createElement("span");
       salaryInnerSpan.innerHTML = jobList[i].salary;
       salaryOuterSpan.append(salaryInnerSpan);
-      const locationOuterSpan = document.createElement("span");
-      locationOuterSpan.innerHTML = "Location: ";
-      jobDesc.append(locationOuterSpan);
-      const locationInnerSpan = document.createElement("span");
-      locationInnerSpan.innerHTML = jobList[i].location;
-      locationOuterSpan.append(locationInnerSpan);
       const br = document.createElement("br");
       jobDesc.append(br);
       const date = document.createElement("span");
@@ -98,6 +86,7 @@ fetch("/data/jobs.json")
       const detailButton = document.createElement("button");
       detailButton.className = "detail";
       detailButton.innerHTML = "Details";
+      detailButton.setAttribute("data-i18n-key", "job_details_button");
       detailBtns.append(detailButton);
 
       detailButton.addEventListener('click', () => {
