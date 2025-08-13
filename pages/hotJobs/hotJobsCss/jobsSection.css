@@ -497,6 +497,9 @@ header .searchbar-container{
 /* End of job's detail*/
 
 @media (max-width: 1320px){
+  .jobs-outer-container {
+    gap: 0;
+  }
   .jobs-outer-container #empty-job-details{
     display: none;
   }
@@ -505,6 +508,8 @@ header .searchbar-container{
   }
   .jobs-outer-container .job-list-container{
     width: 80%;
+    margin-left: auto;
+    margin-right: auto;
   }
   .jobs-outer-container .job-list-container .job-container:hover,
   .jobs-outer-container .job-list-container .job-container.active {
@@ -515,6 +520,7 @@ header .searchbar-container{
 @media (max-width: 500px){
   .jobs-outer-container .job-list-container{
     width: 90%;
+    margin-left: 2px;
   }
 }
 
