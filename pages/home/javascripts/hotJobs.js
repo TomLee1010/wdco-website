@@ -1,5 +1,6 @@
 class Job {
-  constructor(company, jobTitle, salary, classification, date, responsibilities, requirements, highlights, location) {
+  constructor(id, company, jobTitle, salary, classification, date, responsibilities, requirements, highlights, location) {
+    this.id = id;
     this.company = company;
     this.jobTitle = jobTitle;
     this.salary = salary;
@@ -24,6 +25,7 @@ fetch("../../../data/jobs.json")
       const jobHighlights = hotJobs[i].highLights;
       
       const job = new Job(
+        `hotJobs-${i}`,
         jobDetails.company,
         jobDetails.jobTitle,
         jobDetails.salary,
