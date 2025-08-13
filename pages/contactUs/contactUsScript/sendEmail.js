@@ -13,7 +13,7 @@
   if (jobTitle && company) {
     const messageTextarea = document.getElementById('message');
     if (messageTextarea) {
-      messageTextarea.value = `I am interested in the position of ${jobTitle} at ${company}.`;
+      messageTextarea.value = `I'm interested in the ${jobTitle} role and would love to learn more about the opportunity.`;
     }
   }
 })();
