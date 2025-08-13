@@ -520,7 +520,7 @@ header .searchbar-container{
 @media (max-width: 500px){
   .jobs-outer-container .job-list-container{
     width: 90%;
-    margin-left: 2px;
+    margin-left: -3px;
   }
 }
 
