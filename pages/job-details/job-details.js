@@ -44,14 +44,12 @@ function loadJobFromUrl(jobId) {
             id: jobId,
             company: jobData.details.company,
             jobTitle: jobData.details.jobTitle,
-            level: jobData.details.level,
             salary: jobData.details.salary,
-            workHours: jobData.details.workHours,
-            location: jobData.details.location,
             classification: jobData.details.classification,
             date: jobData.details.date,
             responsibilities: jobData.details.responsibilities,
-            requirements: jobData.details.requirements
+            requirements: jobData.details.requirements,
+            location: jobData.details.location
         };
         populateJobDetails(job);
       } else {
@@ -64,6 +62,16 @@ function loadJobFromUrl(jobId) {
     });
 }
 
+function formatToBullets(text) {
+  if (!text) {
+    return '';
+  }
+  const items = text.split('\n').map(item => {
+    return item.trim().replace(/^[\s•-]+\s*/, '');
+  }).filter(item => item);
+  return '<ul>' + items.map(item => `<li>${item}</li>`).join('') + '</ul>';
+}
+
 function populateJobDetails(job) {
   if (!job) {
     displayError('Invalid job data provided.');
@@ -71,6 +79,7 @@ function populateJobDetails(job) {
   }
 
   updateMetaTags(job);
+  addJobPostingSchema(job); // Add this line
   document.title = `${job.jobTitle} | WDC`;
 
   const setText = (id, text) => {
@@ -104,15 +113,12 @@ function populateJobDetails(job) {
 
   setText('item-company-name', job.company);
   setText('item-job-title', job.jobTitle);
-  setText('item-level', job.level || 'N/A');
   setText('item-salary', job.salary);
-  setText('item-workhours', job.workHours);
-  setText('item-location', job.location);
-  setText('item-classification', job.classification || 'N/A');
+  setText('item-classification', job.classification);
   setText('item-date', job.date);
-
-  populateList('duties', job.responsibilities);
-  populateList('requirements', job.requirements);
+  setText('item-location', job.location);
+  document.getElementById('duties').innerHTML = formatToBullets(job.responsibilities);
+  document.getElementById('requirements').innerHTML = formatToBullets(job.requirements);
 
   const applyBtn = document.querySelector('.apply-btn');
   if (applyBtn) {
@@ -129,7 +135,8 @@ function populateJobDetails(job) {
     shareButton.addEventListener("click", (event) => {
       const url = window.location.href;
       const title = job.jobTitle;
-      const shareText = `Check out this job: ${job.jobTitle}\nCompany: ${job.company}\nLocation: ${job.location}`;
+      const shareText = `Check out this job: ${job.jobTitle}
+Company: ${job.company}`;
 
       if (navigator.share) {
         navigator.share({
@@ -140,19 +147,29 @@ function populateJobDetails(job) {
         .then(() => console.log('Successful share'))
         .catch((error) => console.log('Error sharing', error));
       } else {
-        navigator.clipboard.writeText(`${shareText}\n${url}`);
+        navigator.clipboard.writeText(`${shareText}
+${url}`);
         alert("Job details and link copied to clipboard!");
       }
     });
   }
+
+  const whatsappButton = document.querySelector(".whatsapp-link");
 }
 
 function updateMetaTags(job) {
     // Remove old meta tags to prevent duplicates
     document.querySelectorAll('meta[name="description"]').forEach(tag => tag.remove());
     document.querySelectorAll('meta[property^="og:"]').forEach(tag => tag.remove());
+    document.querySelectorAll('link[rel="canonical"]').forEach(tag => tag.remove());
 
-    const descriptionContent = `Apply for the role of ${job.jobTitle} at ${job.company}. Location: ${job.location}. Salary: ${job.salary}.`;
+    const descriptionContent = `Apply for the role of ${job.jobTitle} at ${job.company}. Salary: ${job.salary}.`;
+
+    // Add Canonical Tag
+    const canonicalLink = document.createElement('link');
+    canonicalLink.rel = 'canonical';
+    canonicalLink.href = window.location.href;
+    document.head.appendChild(canonicalLink);
 
     // Standard Meta Description
     const metaDesc = document.createElement('meta');
@@ -183,5 +200,62 @@ function displayError(message) {
   if (container) {
     container.innerHTML = `<h1>${message}</h1>`;
   }
+}
+
+function addJobPostingSchema(job) {
+  // Remove old schema to prevent duplicates
+  document.querySelectorAll('script[type="application/ld+json"]').forEach(tag => tag.remove());
+
+  const schema = {
+    "@context" : "https://schema.org/",
+    "@type" : "JobPosting",
+    "title" : job.jobTitle,
+    "description" : `
+      <h3>Responsibilities</h3>
+      ${job.responsibilities}
+      <h3>Requirements</h3>
+      ${job.requirements}
+    `,
+    "datePosted" : job.date,
+    "hiringOrganization" : {
+      "@type" : "Organization",
+      "name" : job.company,
+      "sameAs": "https://www.wdco.com.hk/"
+    },
+    "jobLocation": {
+      "@type": "Place",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Hong Kong",
+        "addressCountry": "HK"
+      }
+    }
+  };
+
+  // Add salary if available
+  if (job.salary) {
+    const salaryString = job.salary.replace(/k/g, '000').replace(/~/g, '');
+    const salaryParts = salaryString.split('-').map(s => parseInt(s.trim(), 10));
+    
+    if (salaryParts.length > 0) {
+      schema.baseSalary = {
+        "@type": "MonetaryAmount",
+        "currency": "HKD",
+        "value": {
+          "@type": "QuantitativeValue",
+          "minValue": salaryParts[0],
+          "unitText": "MONTH"
+        }
+      };
+      if (salaryParts.length > 1) {
+        schema.baseSalary.value.maxValue = salaryParts[1];
+      }
+    }
+  }
+
+  const script = document.createElement('script');
+  script.type = 'application/ld+json';
+  script.textContent = JSON.stringify(schema);
+  document.head.appendChild(script);
 }
 
