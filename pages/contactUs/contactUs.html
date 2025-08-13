@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Wealth Dimensions | Finance & IT Recruitment in Hong Kong</title>
   <meta name="description" content="Get in touch with Wealth Dimensions Consultancy Limited for expert recruitment services in finance and IT. Reach our Hong Kong office by phone, email, or contact form.">
+  <link rel="icon" type="image/webp" href="../home/images/wdc-icon.webp">
   <link rel="stylesheet" href="../home/css/general.css">
   <link rel="stylesheet" href="../home/css/navbar.css">
   <link rel="stylesheet" href="../home/css/footer.css">
@@ -31,28 +32,29 @@
             <a href="../../index.html"><img src="../home/images/wdc_icon_full_name.webp"></a>
           </div>
           <ul class="links">
-            <li><a href="../../index.html">Home</a></li>
-            <li><a href="../aboutUs/aboutUs.html">About Us</a></li>
-            <li><a href="../hotJobs/hotJobs.html">Hot Jobs</a></li>
-            <li><a href="../contactUs/contactUs.html" class="active">Contact</a></li>
+            <li><a href="../../index.html" data-i18n-key="nav_home">Home</a></li>
+            <li><a href="../aboutUs/aboutUs.html" data-i18n-key="nav_about_us">About Us</a></li>
+            <li><a href="../hotJobs/hotJobs.html" data-i18n-key="nav_hot_jobs">Hot Jobs</a></li>
+            <li><a href="../contactUs/contactUs.html" class="active" data-i18n-key="nav_contact">Contact</a></li>
+            <li class="language-container"><div class="language"><img src="../home/images/language-img.webp"><span class="lang-text">En</span></div></li>
           </ul>
           <div class="right-links">
             <a href="../employer/employer.html" class="right-page-link">
               <div class="right-page">
                 <img src="../home/images/employerImg.webp">
-              <span>Employer</span>
+              <span data-i18n-key="nav_employer">Employer</span>
               </div>
             </a>
             <a href="../privacyPolicy/privacyPolicy.html" class="right-page-link">
               <div class="right-page">
                 <img src="../home/images/privacyPolicyImg.webp" class="privacy-policy-img">
-              <span>Privacy Policy</span>
+              <span data-i18n-key="nav_privacy_policy">Privacy Policy</span>
               </div>
             </a>
           </div>
-          <!-- <div class="language-container"><div class="language"><img src="../home/images/language-img.webp"><span>En</span></div></div> -->
+          
           <div class="menu">
-            <button class="menu-options" onclick=menuArrowRotation()>
+            <button class="menu-options" onclick=menuArrowRotation() data-i18n-key="nav_contact">
               Contact
               <img id="menu-arrow" src="../home/images/downward-arrow.webp">
             </button>
@@ -62,14 +64,14 @@
       <div class="menu-container" id="dropdown-menu">
         <div class="list-container">
           <ul class="menu-links">
-            <div><li><a href="../../index.html">Home</a></li></div>
-            <div><li><a href="../aboutUs/aboutUs.html">About Us</a></li></div>
-            <div><li><a href="../hotJobs/hotJobs.html">Hot Jobs</a></li></div>
-            <div class="active"><li><a href="../contactUs/contactUs.html">Contact</a></li></div>
-            <div><li><a href="../employer/employer.html">Employer</a></li></div>
-            <div><li><a href="../privacyPolicy/privacyPolicy.html">Privacy Policy</a></li></div>
+            <div><li><a href="../../index.html" data-i18n-key="nav_home">Home</a></li></div>
+            <div><li><a href="../aboutUs/aboutUs.html" data-i18n-key="nav_about_us">About Us</a></li></div>
+            <div><li><a href="../hotJobs/hotJobs.html" data-i18n-key="nav_hot_jobs">Hot Jobs</a></li></div>
+            <div class="active"><li><a href="../contactUs/contactUs.html" data-i18n-key="nav_contact">Contact</a></li></div>
+            <div><li><a href="../employer/employer.html" data-i18n-key="nav_employer">Employer</a></li></div>
+            <div><li><a href="../privacyPolicy/privacyPolicy.html" data-i18n-key="nav_privacy_policy">Privacy Policy</a></li></div>
           </ul>
-          <!--<div class="language-container"><div class="language"><img src="pages/home/images/language-img.webp"><span>En</span></div></div>-->
+          <div class="language-container"><div class="language"><img src="../home/images/language-img.webp"><span>En</span></div></div>
         </div>
       </div>
     </nav>
@@ -80,35 +82,35 @@
   <!-- Start of contact us section -->
   <section class="contact-section">
     <div class="outermost-container">
-      <h1>Contact Us</h1>
+      <h1 data-i18n-key="contact_us_page_title">Contact Us</h1>
       <div class="outer-div">
         <div class="form-div">
           <form id="contact-form">
-              <label class="input-label">Your Name</label>
-              <input type="text" placeholder="Name" id="user-name" required>
-              <label class="input-label">Email</label>
-              <input type="text" placeholder="Email" id="user-email" required>
-              <label class="input-label">Phone Number</label>
-              <input type="text" placeholder="Phone Number" id="user-phone-num" required>
-              <label class="input-label">Subject</label>
+              <label class="input-label" data-i18n-key="your_name_label">Your Name</label>
+              <input type="text" placeholder="Name" id="user-name" required data-i18n-key="contact_form_name_placeholder">
+              <label class="input-label" data-i18n-key="email_label">Email</label>
+              <input type="text" placeholder="Email" id="user-email" required data-i18n-key="contact_form_email_placeholder">
+              <label class="input-label" data-i18n-key="phone_number_label">Phone Number</label>
+              <input type="text" placeholder="Phone Number" id="user-phone-num" required data-i18n-key="contact_form_phone_placeholder">
+              <label class="input-label" data-i18n-key="subject_label">Subject</label>
               <select id="subject">
-                <option>Job Code</option>
-                <option>Hiring</option>
+                <option data-i18n-key="job_code_option">Job Code</option>
+                <option data-i18n-key="hiring_option">Hiring</option>
               </select>
-              <label class="input-label">Company Name (Optional)</label>
-              <input type="text" placeholder="Company" id="company-name">
-              <label class="input-label">Message</label>
-              <textarea placeholder="Type your message here..." id="message" required></textarea>
-              <div class="submit-styling"><input type="submit" value="Submit"></div>
+              <label class="input-label" data-i18n-key="company_name_label">Company Name (Optional)</label>
+              <input type="text" placeholder="Company" id="company-name" data-i18n-key="contact_form_company_placeholder">
+              <label class="input-label" data-i18n-key="message_label">Message</label>
+              <textarea placeholder="Type your message here..." id="message" required data-i18n-key="contact_form_message_placeholder"></textarea>
+              <div class="submit-styling"><input type="submit" value="Submit" data-i18n-key="submit_button"></div>
               <p id="form-result"></p>
           </form>
         </div>
         <div class="contact-info-div">
-          <h2>Contact Information</h2>
-          <h3>Hong Kong</h3>
-          <p>NCB Innovation Centre, 888 Lai Chi Kok Road, Kowloon, Hong Kong</p>
-          <span>Email: info@wdco.com.hk</span>
-          <span>Customer Service: +852 3571 9903</span>
+          <h2 data-i18n-key="contact_info_title">Contact Information</h2>
+          <h3 data-i18n-key="hong_kong_office">Hong Kong</h3>
+          <p data-i18n-key="office_address">NCB Innovation Centre, 888 Lai Chi Kok Road, Kowloon, Hong Kong</p>
+          <span data-i18n-key="email_address">Email: info@wdco.com.hk</span>
+          <span data-i18n-key="customer_service_phone">Customer Service: +852 3571 9903</span>
         </div>
         <!-- Start of map -->
         <div id="map"></div>
@@ -123,13 +125,13 @@
     <div class="footer-container">
       <div class="footer-btns-container">
         <div class="followUs-container">
-          <span class="bold">Follow Us</span>
+          <span class="bold" data-i18n-key="footer_follow_us">Follow Us</span>
           <a href="https://www.instagram.com/tomlee_wdco/"><div class="socialMedia-link"><img src="../home/images/instagramIcon.webp"><span>Instagram</span></div></a>
           <a href="https://www.facebook.com/wdchk"><div class="socialMedia-link"><img src="../home/images/faceBookIcon.webp"><span>Facebook</span></div></a>
           <a href="https://www.linkedin.com/company/wealth-dimensions-consultancy-limited/posts/?feedView=all"><div class="socialMedia-link"><img src="../home/images/LinkedInIcon.webp"><span>LinkedIn</span></div></a>
         </div>
         <div class="contact-container">
-          <span class="bold">Contact</span>
+          <span class="bold" data-i18n-key="footer_contact">Contact</span>
           <span class="contact-info gmail">info@wdco.com.hk</span></a>
           <span class="contact-info">+852 3571 9903</span>
         </div>
@@ -137,20 +139,22 @@
       <img class="wdc-logo-1" src="../home/images/WdcLogo.webp">
       <div class="footer-row">
         <div class="agency-info-container">
-          <span class="agency-info">Employment Agency Licence Number :<span>72014</span></span>
-          <span class="agency-info">Labour Department Employment Agency :<span><a href="https://www.eaa.labour.gov.hk">www.eaa.labour.gov.hk</a></span></span>
+          <span class="agency-info"><span data-i18n-key="footer_agency_license_label"></span> <span>72014</span></span>
+          <span class="agency-info"><span data-i18n-key="footer_labour_dept_label"></span> <span><a href="https://www.eaa.labour.gov.hk">www.eaa.labour.gov.hk</a></span></span>
         </div>
         <img class="wdc-logo-1" src="../home/images/WdcLogo.webp">
       </div>
       <div class="policies">
-        <span class="copyright">©2015-2025 by Wealth Dimensions Consultancy Limited</span>
+        <span class="copyright" data-i18n-key="footer_copyright">©2015-2025 by Wealth Dimensions Consultancy Limited</span>
         <div class="padding-container">
-          <span>Terms and Conditions</span>
-          <a href="../privacyPolicy/privacyPolicy.html"><span>Privacy Policy</span></a>
+          <span data-i18n-key="footer_terms">Terms and Conditions</span>
+          <a href="../privacyPolicy/privacyPolicy.html"><span data-i18n-key="nav_privacy_policy">Privacy Policy</span></a>
         </div>
       </div>
     </div>
   </footer>
   <!-- End of footer -->
+  <script>window.path_prefix = '../..';</script>
+  <script src="../../js/i18n.js"></script>
 </body>
 </html>
