@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Wealth Dimensions | Hong Kong Recruitment Experts in Finance & IT</title>
   <meta name="description" content="Learn about Wealth Dimensions Consultancy Limited, a trusted recruitment firm in Hong Kong specializing in finance and IT talent solutions. Discover our mission, values, and industry expertise.">
+  <link rel="icon" type="image/webp" href="../home/images/wdc-icon.webp">
   <link rel="stylesheet" href="../home/css/general.css">
   <link rel="stylesheet" href="../home/css/navbar.css">
   <link rel="stylesheet" href="../home/css/footer.css">
@@ -28,28 +29,29 @@
             <a href="../../index.html"><img src="../home/images/wdc_icon_full_name.webp"></a>
           </div>
           <ul class="links">
-            <li><a href="../../index.html">Home</a></li>
-            <li><a href="../aboutUs/aboutUs.html" class="active">About Us</a></li>
-            <li><a href="../hotJobs/hotJobs.html">Hot Jobs</a></li>
-            <li><a href="../contactUs/contactUs.html">Contact</a></li>
+            <li><a href="../../index.html" data-i18n-key="nav_home">Home</a></li>
+            <li><a href="../aboutUs/aboutUs.html" class="active" data-i18n-key="nav_about_us">About Us</a></li>
+            <li><a href="../hotJobs/hotJobs.html" data-i18n-key="nav_hot_jobs">Hot Jobs</a></li>
+            <li><a href="../contactUs/contactUs.html" data-i18n-key="nav_contact">Contact</a></li>
+            <li class="language-container"><div class="language"><img src="../home/images/language-img.webp"><span class="lang-text">En</span></div></li>
           </ul>
           <div class="right-links">
             <a href="../employer/employer.html" class="right-page-link">
               <div class="right-page">
                 <img src="../home/images/employerImg.webp">
-              <span>Employer</span>
+              <span data-i18n-key="nav_employer">Employer</span>
               </div>
             </a>
             <a href="../privacyPolicy/privacyPolicy.html" class="right-page-link">
               <div class="right-page">
                 <img src="../home/images/privacyPolicyImg.webp" class="privacy-policy-img">
-              <span>Privacy Policy</span>
+              <span data-i18n-key="nav_privacy_policy">Privacy Policy</span>
               </div>
             </a>
           </div>
-          <!-- <div class="language-container"><div class="language"><img src="../home/images/language-img.webp"><span>En</span></div></div> -->
+          
           <div class="menu">
-            <button class="menu-options" onclick=menuArrowRotation()>
+            <button class="menu-options" onclick=menuArrowRotation() data-i18n-key="nav_about_us">
               About Us
               <img id="menu-arrow" src="../home/images/downward-arrow.webp">
             </button>
@@ -59,14 +61,14 @@
       <div class="menu-container" id="dropdown-menu">
         <div class="list-container">
           <ul class="menu-links">
-            <div><li><a href="../../index.html">Home</a></li></div>
-            <div class="active"><li><a href="../aboutUs/aboutUs.html">About Us</a></li></div>
-            <div><li><a href="../hotJobs/hotJobs.html">Hot Jobs</a></li></div>
-            <div><li><a href="../contactUs/contactUs.html">Contact</a></li></div>
-            <div><li><a href="../employer/employer.html">Employer</a></li></div>
-            <div><li><a href="../privacyPolicy/privacyPolicy.html">Privacy Policy</a></li></div>
+            <div><li><a href="../../index.html" data-i18n-key="nav_home">Home</a></li></div>
+            <div class="active"><li><a href="../aboutUs/aboutUs.html" data-i18n-key="nav_about_us">About Us</a></li></div>
+            <div><li><a href="../hotJobs/hotJobs.html" data-i18n-key="nav_hot_jobs">Hot Jobs</a></li></div>
+            <div><li><a href="../contactUs/contactUs.html" data-i18n-key="nav_contact">Contact</a></li></div>
+            <div><li><a href="../employer/employer.html" data-i18n-key="nav_employer">Employer</a></li></div>
+            <div><li><a href="../privacyPolicy/privacyPolicy.html" data-i18n-key="nav_privacy_policy">Privacy Policy</a></li></div>
           </ul>
-          <!--<div class="language-container"><div class="language"><img src="pages/home/images/language-img.webp"><span>En</span></div></div>-->
+          <div class="language-container"><div class="language"><img src="../home/images/language-img.webp"><span>En</span></div></div>
         </div>
       </div>
     </nav>
@@ -77,8 +79,8 @@
   <section>
     <div class="aboutUsIntro">
       <div class="aboutUsIntroText">
-        <h1>Finding a job<br>has never been this easy</h1>
-        <p>Wealth Dimensions doesn't just help you to look for a job. We make sure you find one. By understanding your experience and career goals, we develop a job search plan customized to your needs.</p>
+        <h1 data-i18n-key="about_us_title">Finding a job<br>has never been this easy</h1>
+        <p data-i18n-key="about_us_subtitle">Wealth Dimensions doesn't just help you to look for a job. We make sure you find one. By understanding your experience and career goals, we develop a job search plan customized to your needs.</p>
       </div>
     </div>
   </section>
@@ -87,13 +89,13 @@
   <section>
     <div class="about-us-widgets-container">
       <div class="widget-container" id="first-widget">
-        <div class="widget-title"><h2>Our Mission</h2><img src="aboutUsImg/missionImg.webp"></div>
-        <p>Our core values to provide professional and high quality services to both our clients and candidates.
+        <div class="widget-title"><h2 data-i18n-key="our_mission_title">Our Mission</h2><img src="aboutUsImg/missionImg.webp"></div>
+        <p data-i18n-key="our_mission_text">Our core values to provide professional and high quality services to both our clients and candidates.
           We pledge to deliver the best solutions, with experience and accuracy to our clients and candidates.</p>
       </div>
       <div class="widget-container">
-        <div class="widget-title"><h2>Specialty</h2><img src="aboutUsImg/specialtyImg.webp"></div>
-        <p>Our consultant team possesses more than 10 years well versed experience in Banking, Financial Services industry and are closely attaching to the concurrent Human Resources market. With the aids of our extensive relationship networks in the financial industry, we help both our clients and candidates for perfect job matching.</p>
+        <div class="widget-title"><h2 data-i18n-key="specialty_title">Specialty</h2><img src="aboutUsImg/specialtyImg.webp"></div>
+        <p data-i18n-key="specialty_text">Our consultant team possesses more than 10 years well versed experience in Banking, Financial Services industry and are closely attaching to the concurrent Human Resources market. With the aids of our extensive relationship networks in the financial industry, we help both our clients and candidates for perfect job matching.</p>
       </div>
     </div>
   </section>
@@ -109,7 +111,7 @@
           </video>
         </div>
         <div class="map-container">
-          <p>We help talents and companies to make their best choices through our committed and effective talent recruitment strategies and services.</p>
+          <p data-i18n-key="map_text">We help talents and companies to make their best choices through our committed and effective talent recruitment strategies and services.</p>
         </div>
       </div>
     </div>
@@ -120,13 +122,13 @@
     <div class="footer-container">
       <div class="footer-btns-container">
         <div class="followUs-container">
-          <span class="bold">Follow Us</span>
+          <span class="bold" data-i18n-key="footer_follow_us">Follow Us</span>
           <a href="https://www.instagram.com/tomlee_wdco/"><div class="socialMedia-link"><img src="../home/images/instagramIcon.webp"><span>Instagram</span></div></a>
           <a href="https://www.facebook.com/wdchk"><div class="socialMedia-link"><img src="../home/images/faceBookIcon.webp"><span>Facebook</span></div></a>
           <a href="https://www.linkedin.com/company/wealth-dimensions-consultancy-limited/posts/?feedView=all"><div class="socialMedia-link"><img src="../home/images/LinkedInIcon.webp"><span>LinkedIn</span></div></a>
         </div>
         <div class="contact-container">
-          <span class="bold">Contact</span>
+          <span class="bold" data-i18n-key="footer_contact">Contact</span>
           <span class="contact-info gmail">info@wdco.com.hk</span></a>
           <span class="contact-info">+852 3571 9903</span>
         </div>
@@ -134,20 +136,22 @@
       <img class="wdc-logo-1" src="../home/images/WdcLogo.webp">
       <div class="footer-row">
         <div class="agency-info-container">
-          <span class="agency-info">Employment Agency Licence Number :<span>72014</span></span>
-          <span class="agency-info">Labour Department Employment Agency :<span><a href="https://www.eaa.labour.gov.hk">www.eaa.labour.gov.hk</a></span></span>
+          <span class="agency-info"><span data-i18n-key="footer_agency_license_label"></span> <span>72014</span></span>
+          <span class="agency-info"><span data-i18n-key="footer_labour_dept_label"></span> <span><a href="https://www.eaa.labour.gov.hk">www.eaa.labour.gov.hk</a></span></span>
         </div>
         <img class="wdc-logo-1" src="../home/images/WdcLogo.webp">
       </div>
       <div class="policies">
-        <span class="copyright">©2015-2025 by Wealth Dimensions Consultancy Limited</span>
+        <span class="copyright" data-i18n-key="footer_copyright">©2015-2025 by Wealth Dimensions Consultancy Limited</span>
         <div class="padding-container">
-          <span>Terms and Conditions</span>
-          <a href="../privacyPolicy/privacyPolicy.html"><span>Privacy Policy</span></a>
+          <span data-i18n-key="footer_terms">Terms and Conditions</span>
+          <a href="../privacyPolicy/privacyPolicy.html"><span data-i18n-key="nav_privacy_policy">Privacy Policy</span></a>
         </div>
       </div>
     </div>
   </footer>
   <!-- End of footer -->
+  <script>window.path_prefix = '../..';</script>
+  <script src="../../js/i18n.js"></script>
 </body>
 </html>
