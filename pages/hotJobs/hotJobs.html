@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hot Jobs in Finance & IT | Wealth Dimensions Consultancy Limited</title>
-  <meta name="description" content="Browse the latest hot jobs in the financial and tech industries in Hong Kong. Search by keyword, salary, and location to find your next career opportunity.">
+  <meta name="description" content="Browse the latest hot jobs in the financial and tech industries. Search by keyword, salary, and location to find your next career opportunity.">
+  <link rel="icon" type="image/webp" href="../home/images/wdc-icon.webp">
   <link rel="stylesheet" href="../home/css/general.css">
   <link rel="stylesheet" href="../home/css/navbar.css">
   <link rel="stylesheet" href="../home/css/footer.css">
@@ -25,28 +26,29 @@
             <a href="../../index.html"><img src="../home/images/wdc_icon_full_name.webp"></a>
           </div>
           <ul class="links">
-            <li><a href="../../index.html">Home</a></li>
-            <li><a href="../aboutUs/aboutUs.html">About Us</a></li>
-            <li><a href="../hotJobs/hotJobs.html" class="active">Hot Jobs</a></li>
-            <li><a href="../contactUs/contactUs.html">Contact</a></li>
+            <li><a href="../../index.html" data-i18n-key="nav_home">Home</a></li>
+            <li><a href="../aboutUs/aboutUs.html" data-i18n-key="nav_about_us">About Us</a></li>
+            <li><a href="../hotJobs/hotJobs.html" class="active" data-i18n-key="nav_hot_jobs">Hot Jobs</a></li>
+            <li><a href="../contactUs/contactUs.html" data-i18n-key="nav_contact">Contact</a></li>
+            <li class="language-container"><div class="language"><img src="../home/images/language-img.webp"><span class="lang-text">En</span></div></li>
           </ul>
           <div class="right-links">
             <a href="../employer/employer.html" class="right-page-link">
               <div class="right-page">
                 <img src="../home/images/employerImg.webp">
-              <span>Employer</span>
+              <span data-i18n-key="nav_employer">Employer</span>
               </div>
             </a>
             <a href="../privacyPolicy/privacyPolicy.html" class="right-page-link">
               <div class="right-page">
                 <img src="../home/images/privacyPolicyImg.webp" class="privacy-policy-img">
-              <span>Privacy Policy</span>
+              <span data-i18n-key="nav_privacy_policy">Privacy Policy</span>
               </div>
             </a>
           </div>
-          <!-- <div class="language-container"><div class="language"><img src="../home/images/language-img.webp"><span>En</span></div></div> -->
+          
           <div class="menu">
-            <button class="menu-options" onclick=menuArrowRotation()>
+            <button class="menu-options" onclick=menuArrowRotation() data-i18n-key="nav_hot_jobs">
               Hot Jobs
               <img id="menu-arrow" src="../home/images/downward-arrow.webp">
             </button>
@@ -56,14 +58,14 @@
       <div class="menu-container" id="dropdown-menu">
         <div class="list-container">
           <ul class="menu-links">
-            <div><li><a href="../../index.html">Home</a></li></div>
-            <div><li><a href="../aboutUs/aboutUs.html">About Us</a></li></div>
-            <div class="active"><li><a href="../hotJobs/hotJobs.html">Hot Jobs</a></li></div>
-            <div><li><a href="../contactUs/contactUs.html">Contact</a></li></div>
-            <div><li><a href="../employer/employer.html">Employer</a></li></div>
-            <div><li><a href="../privacyPolicy/privacyPolicy.html">Privacy Policy</a></li></div>
+            <div><li><a href="../../index.html" data-i18n-key="nav_home">Home</a></li></div>
+            <div><li><a href="../aboutUs/aboutUs.html" data-i18n-key="nav_about_us">About Us</a></li></div>
+            <div class="active"><li><a href="../hotJobs/hotJobs.html" data-i18n-key="nav_hot_jobs">Hot Jobs</a></li></div>
+            <div><li><a href="../contactUs/contactUs.html" data-i18n-key="nav_contact">Contact</a></li></div>
+            <div><li><a href="../employer/employer.html" data-i18n-key="nav_employer">Employer</a></li></div>
+            <div><li><a href="../privacyPolicy/privacyPolicy.html" data-i18n-key="nav_privacy_policy">Privacy Policy</a></li></div>
           </ul>
-          <!--<div class="language-container"><div class="language"><img src="pages/home/images/language-img.webp"><span>En</span></div></div>-->
+          <div class="language-container"><div class="language"><img src="../home/images/language-img.webp"><span>En</span></div></div>
         </div>
       </div>
     </nav>
@@ -73,9 +75,9 @@
     <div class="searchbar-container">
       <div class="searchbar">
         <div class="searchbar-styling">
-          <input class="serach" id="search-input" type="search" name="searchBar" placeholder="Job Search... (E.g. Job title, keywords, careers)">
-          <button class="more-options-btn" onclick=searchArrowRotation()>
-            More options
+          <input class="serach" id="search-input" type="search" name="searchBar" placeholder="Job Search..." data-i18n-key="hot_jobs_search_placeholder">
+          <button class="more-options-btn" onclick=searchArrowRotation() style="display: none;">
+            <span data-i18n-key="more_options">More options</span>
             <img id="search-arrow" src="/pages/home/images/downward-arrow.webp">
           </button>
           <button class="search-btn" id="user-search-btn">
@@ -86,13 +88,8 @@
     </div>
     <div class="more-options-container" id="more-options-jobs-page">
       <div class="search-options-menu">
-        <select class="sorting-btn" id="select-level">
-          <option>All Levels</option>
-          <option>Easy</option>
-          <option>Regular</option>
-          <option>High Level</option>
-        </select>
-        <lable>from HKD (Monthly):</lable>
+        
+        <lable data-i18n-key="from_salary_label">from HKD (Monthly):</lable>
         <select class="sorting-btn" id="from-amount">
           <option>$0</option>
           <option>$10k</option>
@@ -106,7 +103,7 @@
           <option>$90k</option>
           <option>$100k</option>
         </select>
-        <lable>to HKD (Monthly):</lable>
+        <lable data-i18n-key="to_salary_label">to HKD (Monthly):</lable>
         <select class="sorting-btn" id="to-amount">
           <option>$10k</option>
           <option>$20k</option>
@@ -129,7 +126,7 @@
       <img src="/pages/hotJobs/hotJobsImg/notFoundImg.webp">
       <div class="not-found-stying">
         <h1 id="not-found-notice"></h1>
-        <dl><dt>Search suggestions:</dt><dd><ol><li>Try more general keywords</li><li>Try other keywords</li><li>Check for spelling errors</li><li>Adjust search filters</li></ol></dd></dl>
+        <dl><dt data-i18n-key="not_found_suggestions">Search suggestions:</dt><dd><ol><li data-i18n-key="suggestion_1">Try more general keywords</li><li data-i18n-key="suggestion_2">Try other keywords</li><li data-i18n-key="suggestion_3">Check for spelling errors</li><li data-i18n-key="suggestion_4">Adjust search filters</li></ol></dd></dl>
       </div>
     </div>
     <div class="loader-container" id="loader-container-div">
@@ -139,10 +136,10 @@
       <div class="job-list-container">
         <div class="sorting-and-results">
           <select name="sortMethod" id="sort-method">
-            <option value="sort by relevance">Sort by  relevance</option>
-            <option value="sort by date">Sort by date</option>
+            <option value="sort by relevance" data-i18n-key="sort_by_relevance">Sort by  relevance</option>
+            <option value="sort by date" data-i18n-key="sort_by_date">Sort by date</option>
           </select>
-          <span class="search-result" id="search-result-container">Job matched: <span id="search-results">42</span></span>
+          <span class="search-result" id="search-result-container" data-i18n-key="job_matched">Job matched: <span id="search-results">42</span></span>
         </div>
         <div id="create-job-items">
           <!--
@@ -151,8 +148,6 @@
               <span class="company">A leading Chinese bank is recruiting</span>
               <h3>Relationship Manager - Corporate Banking (WDCO - CBRM)</h3>
               <span class="outer-span">Salary:<span>~20-50k HKD</span><img src="hotJobsImg/salary.webp"></span>
-              <span class="outer-span">Work hours:<span>10:00 am - 6:00 pm</span><img src="hotJobsImg/workHours.webp"></span>
-              <span class="outer-span">Location:<span>Tsing Yi</span><img src="hotJobsImg/location.webp"></span>
               <div class="outer-highlights-container">
                 <div class="highlights">
                   <h4>Job Highlights</h4>
@@ -178,8 +173,8 @@
       <script src="/pages/home/javascripts/loader.js"></script>
       <div id="empty-job-details">
         <div class="inner-text">
-          <h2>Select a job on the left</h2>
-          <p>Display job details here</p>
+          <h2 data-i18n-key="select_job_prompt">Select a job on the left</h2>
+          <p data-i18n-key="display_job_details_prompt">Display job details here</p>
         </div>
         <div class="inner-decoration">
           <img src="/pages/hotJobs/hotJobsImg/airBalloon.webp" class="air-balloon-img">
@@ -188,20 +183,18 @@
       <div class="job-details" id="job-details-div">
         <div class="inner-container">
             <div class="controls">
-              <a href="http://wa.link/ksmjnu" target="_blank" rel="noopener noreferrer" class="whatsapp-link">whatsapp<img src="hotJobsImg/whatsapp.webp"></a>
-              <a href="#" target="_blank" rel="noopener noreferrer" class="new-tab">new tab<img src="hotJobsImg/newTab.webp"></a>
-              <button class="share-btn">share<img src="hotJobsImg/share.webp"></button>
+              <a href="http://wa.link/ksmjnu" target="_blank" rel="noopener noreferrer" class="whatsapp-link"><span data-i18n-key="whatsapp_button">whatsapp</span><img src="hotJobsImg/whatsapp.webp"></a>
+              <a href="#" target="_blank" rel="noopener noreferrer" class="new-tab"><span data-i18n-key="new_tab_button">new tab</span><img src="hotJobsImg/newTab.webp"></a>
+              <button class="share-btn"><span data-i18n-key="share_button">share</span><img src="hotJobsImg/share.webp"></button>
             </div>
-            <div class="detail-bannar-container"><img class="job-bannar" src="hotJobsImg/Banks.webp"></div>
+            <div class="detail-bannar-container"><img class="job-bannar" src="/pages/hotJobs/hotJobsImg/Banks.webp"></div>
             <div class="inner-alignment">
               <div class="company-name"><span class="company" id="item-company-name">A chinese bank is recruiting</span><button class="question-btn"><img src="../home/images/question.webp"></button></div>
               <h2 id="item-job-title">Relationship Manager - Corporate Banking (WDCO - CBRM)</h2>
-              <span class="outer-span">Job Level:<span id="item-level">Easy</span></span>
-              <span class="outer-span">Salary:<span id="item-salary">~20-50k</span>HKD</span>
-              <span class="outer-span">Work hours:<span id="item-workhours">10:00 am - 6:00 pm</span></span>
-              <span class="outer-span">Location:<span id="item-location">Tsing Yi</span></span>
-              <span class="outer-span">Profession:<span id="item-classification">Account & Relationship Management</span></span>
-              <span class="date">Posted on <span id="item-date">2024-3-30</span></span>
+              <span class="outer-span">Salary:<span id="item-salary"></span></span>
+              <span class="outer-span">Classification:<span id="item-classification"></span></span>
+              <span class="outer-span">Location:<span id="item-location"></span></span>
+              <span class="outer-span">Date:<span id="item-date"></span></span>
               <button class="apply-btn">Apply</button>
               <h3>Responsibilities</h3>
               <dl id="duties">
@@ -263,9 +256,9 @@
             <div class="advice">
               <div class="advice-title">
                 <img src="hotJobsImg/lightBulb.webp">
-                <h4>Support</h4>
+                <h4 data-i18n-key="support_title">Support</h4>
               </div>
-              <p>Wondering whether this job is suitable for you? Seek for our advice now through whatsapp on the link above, we will answer all of your queries and provide all the support you need.</p>
+              <p data-i18n-key="support_text">Wondering whether this job is suitable for you? Seek for our advice now through whatsapp on the link above, we will answer all of your queries and provide all the support you need.</p>
             </div>
             <div class="white-space"></div>
             
@@ -279,13 +272,13 @@
     <div class="footer-container">
       <div class="footer-btns-container">
         <div class="followUs-container">
-          <span class="bold">Follow Us</span>
+          <span class="bold" data-i18n-key="footer_follow_us">Follow Us</span>
           <a href="https://www.instagram.com/tomlee_wdco/"><div class="socialMedia-link"><img src="../home/images/instagramIcon.webp"><span>Instagram</span></div></a>
           <a href="https://www.facebook.com/wdchk"><div class="socialMedia-link"><img src="../home/images/faceBookIcon.webp"><span>Facebook</span></div></a>
           <a href="https://www.linkedin.com/company/wealth-dimensions-consultancy-limited/posts/?feedView=all"><div class="socialMedia-link"><img src="../home/images/LinkedInIcon.webp"><span>LinkedIn</span></div></a>
         </div>
         <div class="contact-container">
-          <span class="bold">Contact</span>
+          <span class="bold" data-i18n-key="footer_contact">Contact</span>
           <span class="contact-info gmail">info@wdco.com.hk</span></a>
           <span class="contact-info">+852 3571 9903</span>
         </div>
@@ -293,16 +286,16 @@
       <img class="wdc-logo-1" src="../home/images/WdcLogo.webp">
       <div class="footer-row">
         <div class="agency-info-container">
-          <span class="agency-info">Employment Agency Licence Number :<span>72014</span></span>
-          <span class="agency-info">Labour Department Employment Agency :<span><a href="https://www.eaa.labour.gov.hk">www.eaa.labour.gov.hk</a></span></span>
+          <span class="agency-info"><span data-i18n-key="footer_agency_license_label"></span> <span>72014</span></span>
+          <span class="agency-info"><span data-i18n-key="footer_labour_dept_label"></span> <span><a href="https://www.eaa.labour.gov.hk">www.eaa.labour.gov.hk</a></span></span>
         </div>
         <img class="wdc-logo-1" src="../home/images/WdcLogo.webp">
       </div>
       <div class="policies">
-        <span class="copyright">©2015-2025 by Wealth Dimensions Consultancy Limited</span>
+        <span class="copyright" data-i18n-key="footer_copyright">©2015-2025 by Wealth Dimensions Consultancy Limited</span>
         <div class="padding-container">
-          <span>Terms and Conditions</span>
-          <a href="../privacyPolicy/privacyPolicy.html"><span>Privacy Policy</span></a>
+          <span data-i18n-key="footer_terms">Terms and Conditions</span>
+          <a href="../privacyPolicy/privacyPolicy.html"><span data-i18n-key="nav_privacy_policy">Privacy Policy</span></a>
         </div>
       </div>
     </div>
@@ -310,5 +303,7 @@
   <!-- End of footer -->
   <script src="../jobs.js"></script>
   <script src="../search.js"></script>
+  <script>window.path_prefix = '../..';</script>
+  <script src="../../js/i18n.js"></script>
 </body>
 </html>
